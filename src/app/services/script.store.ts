@@ -15,7 +15,7 @@ export const ScriptStore: Script[] = [
     {name: 'quill-core', src: './assets/assetspuebla/libs/quilljs/js/quill.core.js'}, 
     {name: 'quill', src: './assets/assetspuebla/libs/quilljs/js/quill.js'}, 
     {name: 'chosen', src: './assets/assetspuebla/libs/chosen/chosen.jquery.min.js'}, 
-    {name: 'datetimepicker', src: './assets/assetspuebla/libs/datetimepicker/jquery.datetimepicker.full.min.j'}, 
+    {name: 'datetimepicker', src: './assets/assetspuebla/libs/datetimepicker/jquery.datetimepicker.full.min.js'}, 
     {name: 'venobox', src: './assets/assetspuebla/libs/venobox/venobox.min.js'},
     {name: 'waypoints', src: './assets/assetspuebla/libs/waypoints/jquery.waypoints.min.js'},
     {name: 'main', src: './assets/assetspuebla/js/main.js'}
