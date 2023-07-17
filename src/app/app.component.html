@@ -208,7 +208,7 @@
       <section class="list-categories">
           <div class="container">
               <div class="title-wrap align-center">
-                  <h2>¿Estas en Puebla y requiere alguno de estos servicios?</h2>
+                  <h2>¿Estas en Puebla y requieres alguno de estos servicios?</h2>
                   <span style="display: block; text-align: center;"><h2  class="title-wrap1">Tour exclusivo que combina transporte, traductores y un recorrido inolvidable por los lugares más destacados</h2></span>              </div>
               <div class="inner">
                   <div class="row">
@@ -254,7 +254,7 @@
             <h2 class="cities__title title offset-item">Sitios Populares</h2>
             <div class="cities__content offset-item">
                 <div class="row">
-                    <div class="col-lg-3 col-sm-6" *ngFor="let pack of packs; let index = index" >
+                    <div class="col-lg-3 col-sm-6" *ngFor="let pack of packs.slice(0, 8); let index = index">
                         <div class="cities__item hover__box">
                           <div class="cities__thumb hover__box__thumb">
                             <a title="Puebla" >
@@ -285,8 +285,7 @@
               <div class="banner-apps__content">
                   <h2 class="banner-apps__title offset-item">Tour gastronómico</h2>
                   
-                  <p class="banner-apps__desc offset-item" style="width: 66%;" >Descubre los sabores de Puebla en un tour gastronómico único, 
-                   durante toda tu estancia. podrás pobrar los platillos más típicos y visitar lugares espectaculares</p>
+                  <p class="banner-apps__desc offset-item"  >Descubre los sabores auténticos de Puebla en nuestro exclusivo tour gastronómico. Durante tu estancia, podrás probar los platillos más típicos y visitar lugares espectaculares. Sumérgete en la rica cultura culinaria de Puebla y prueba el famoso mole poblano, los chiles en nogada y las cemitas. Además, explorarás mercados locales y disfrutarás de vistas panorámicas. ¡Una experiencia gastronómica única te espera en Puebla!</p>
                   <form action="#" class="shop-details__addcart">
                    
                     <button type="submit" style="background: #000; ">Más info</button>
@@ -296,7 +295,7 @@
       </div><!-- .banner-apps -->
       <div class="trending trending-business">
           <div class="container">
-              <h2 class="title title-border-bottom align-center offset-item">Platillos populares de Puebla <br> Estos y más platillo se degustan en Puebla</h2>
+              <h2 class="title title-border-bottom align-center offset-item">Platillos populares de Puebla <br> Estos y más platillos se degustan en Puebla</h2>
               
               <div class="restaurant-sliders slick-sliders offset-item">
                 <div class="restaurant-slider slick-slider" data-item="4" data-itemScroll="4" data-arrows="true" data-dots="true" data-tabletItem="2" data-tabletScroll="2" data-mobileItem="1" data-mobileScroll="1">
@@ -552,25 +551,50 @@
                   <div class="col-lg-5">
                       <div class="footer__top__info">
                           <a title="Logo" href="" class="footer__top__info__logo"><img src="assets/assetspuebla/images/assets/logo.png" alt="Golo"></a>
-                          <p class="footer__top__info__desc">Puebla-APP.</p>
+                          <!-- <p class="footer__top__info__desc">Puebla-APP.</p> -->
                           <div class="footer__top__info__app">
                               <!-- <a title="App Store" href="#" class="banner-apps__download__iphone"><img src="assets/assetspuebla/images/assets/app-store.png" alt="App Store"></a> -->
-                              <a title="Google Play" href="#" class="banner-apps__download__android"><img src="assets/assetspuebla/images/assets/google-play.png" alt="Google Play"></a>
+                              <!-- <a title="Google Play" href="#" class="banner-apps__download__android"><img src="assets/assetspuebla/images/assets/google-play.png" alt="Google Play"></a> -->
                           </div>
+                          <aside class="footer__top__nav footer__top__nav--contact">
+                           
+                            <ul>
+                                <li class="facebook">
+                                    <a title="Facebook" href="#">                              
+                                        <i class="la la-facebook-f"></i>
+                                    </a>
+                                </li>
+                                <li class="twitter">
+                                    <a title="Twitter" href="#">                                                           
+                                        <i class="la la-twitter"></i>
+                                    </a>
+                                </li>
+                                <li class="youtube">
+                                    <a title="Youtube" href="#">                               
+                                        <i class="la la-youtube"></i>
+                                    </a>
+                                </li>
+                                <li class="instagram">
+                                    <a title="Instagram" href="#">                             
+                                        <i class="la la-instagram"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </aside>
                       </div>
                   </div>
                   <div class="col-lg-2">
-                      <aside class="footer__top__nav">
+                      <!-- <aside class="footer__top__nav">
                           <h3>Compañia</h3>
                           <ul>
                               <li><a title="About Us" href="#">Nosotros</a></li>
                               <li><a title="Faqs" href="#">Faqs</a></li>
                               <li><a title="Contact" href="#">Contacto</a></li>
                           </ul>
-                      </aside>
+                      </aside> -->
                   </div>
                   <div class="col-lg-2">
-                      <aside class="footer__top__nav">
+                      <!-- <aside class="footer__top__nav">
                           <h3>Soporte</h3>
                           <ul>
                               <li><a title="Get in Touch" href="#">Enlace</a></li>
@@ -578,14 +602,14 @@
                               <li><a title="Live chat" href="#">Enlace</a></li>
                               <li><a title="How it works" href="#">Enlace</a></li>
                           </ul>
-                      </aside>
+                      </aside> -->
                   </div>
                   <div class="col-lg-3">
                       <aside class="footer__top__nav footer__top__nav--contact">
                           <h3>Contacto</h3>
                           <p>Email: <a href="../cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="ee9d9b9e9e819c9aae8a81838f8780c08d8183">[email&#160;protected]</a></p>
                           <p>Teléfono: 1 (00) 832 2342</p>
-                          <ul>
+                          <!-- <ul>
                               <li class="facebook">
                                   <a title="Facebook" href="#">                              
                                       <i class="la la-facebook-f"></i>
@@ -606,7 +630,7 @@
                                       <i class="la la-instagram"></i>
                                   </a>
                               </li>
-                          </ul>
+                          </ul> -->
                       </aside>
                   </div>
               </div>
