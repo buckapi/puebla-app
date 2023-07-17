@@ -85,10 +85,10 @@
 .cities__thumb:hover::after {
   content: "";
   position: absolute;
-  top: 60%;
+  top: 0%;
   left: 0;
   width: 100%;
-  height: 50%;
+  height: 100%;
   background-color: rgba(0, 0, 0, 0.6); /* Fondo negro translúcido */
   z-index: 0;
 }

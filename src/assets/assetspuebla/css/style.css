@@ -351,7 +351,7 @@ a.site__menu__icon { display: none; }
 .site-banner.layout-02 .site-banner__content > p strong { color: #2d2d2d; }
 .site-banner.layout-02 .site-banner__search { max-width: 470px; }
 
-.site-banner__title { font-size: 52px; font-family: "Jost"; font-weight: 500; color: #2d2d2d; margin-bottom: 32px; }
+.site-banner__title { font-size: 52px; font-family: "Jost"; font-weight: 500; color: #2d2d2d; margin-bottom: 32px; max-width: 80%; margin-top: 70px;}
 
 .site-banner__search { position: relative; max-width: 600px; width: 100%; margin-bottom: 20px; }
 .site-banner__search .site-banner__search__input { border: 0; font-style: inherit; padding: 0; line-height: 60px; width: 100%; border-radius: 30px; -webkit-backface-visibility: hidden; -moz-backface-visibility: hidden; -webkit-transform: translate3d(0, 0, 0); -moz-transform: translate3d(0, 0, 0); box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1); background-color: #ffffff; padding: 0 15px 0 54px; }

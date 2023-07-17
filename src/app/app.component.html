@@ -254,18 +254,21 @@
             <h2 class="cities__title title offset-item">Sitios Populares</h2>
             <div class="cities__content offset-item">
                 <div class="row">
-                    <div class="col-lg-3 col-sm-6" *ngFor="let pack of packs; let index = index" style="cursor: pointer;">
+                    <div class="col-lg-3 col-sm-6" *ngFor="let pack of packs; let index = index" >
                         <div class="cities__item hover__box">
                           <div class="cities__thumb hover__box__thumb">
-                            <a title="Puebla" href="ex-half-map-1.html">
+                            <a title="Puebla" >
                               <img [src]="pack.images[0]" alt="Tokyo">
                             </a>
                             <div class="black-overlay"></div>
                           </div>
-                          <h4 class="cities__name">{{ pack.name }}</h4>
+                          <h3 class="cities__name">{{ pack.name }}</h3>
+                          
                           <div class="cities__info">
-                            <h3 class="cities__capital">{{ pack.location }}</h3>
                             <p class="cities__number hidden-description">{{ pack.shortDescription.slice(0, 150) }} </p>
+                            <h4 class="cities__number hidden-description" style="margin-right: 20px; text-align: right; cursor: pointer;">ver mas</h4>
+
+                            
                           </div>
                         </div>
                       </div>
