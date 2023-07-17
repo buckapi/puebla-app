@@ -885,7 +885,7 @@
 	    text-align: center;
 	}
 	.site-header {
-	    position: relative;
+	    position: fixed;
 	    z-index: 111;
 	}
 	.site-header.home-header{
@@ -2028,6 +2028,9 @@
 		margin-bottom: 20px;
 	}
 	.title-wrap h2{
+		font-size: 20px;
+	}
+	.title-wrap1 h2{
 		font-size: 20px;
 	}
 	.title-wrap p{

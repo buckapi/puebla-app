@@ -246,7 +246,7 @@ textarea:focus { border-color: #23d3d3; outline: none; }
 
 a.site__menu__icon { display: none; }
 
-.site__brand { line-height: 40px; display: inline-block; vertical-align: middle; margin-right: 23px; }
+.site__brand { line-height: 40px; display: contents; vertical-align: middle; margin-right: 23px; }
 
 .site__search { line-height: 40px; display: inline-block; vertical-align: middle; max-width: 270px; width: 100%; vertical-align: baseline; line-height: 40px; display: inline-block; vertical-align: middle; max-width: 270px; width: 100%; vertical-align: baseline; }
 .site__search .search__close { position: absolute; top: 50%; transform: translateY(-50%); right: 25px; line-height: 0; z-index: 10; display: none; position: absolute; top: 50%; transform: translateY(-50%); right: 25px; line-height: 0; z-index: 10; display: none; }
@@ -265,7 +265,12 @@ a.site__menu__icon { display: none; }
 .right-header .header-menu li:hover > a { color: #23d3d3; }
 .right-header .header-menu .sub-menu { top: 0; left: 100%; padding: 0; display: none; opacity: 0; visibility: hidden; }
 
-.site__brand__logo img { max-width: 96px; }
+.site__brand__logo img { max-width: 30%; }
+@media (max-width: 600px) {
+	.site__brand__logo img {
+	  max-width: 70%;
+	}
+  }
 
 .site__search__form { line-height: normal; border-bottom: 1px solid #d8d8d8; position: relative; padding-bottom: 3px; }
 .site__search__form .site__search__input { border: 0; padding: 0; font-style: normal; color: #8d8d8d; margin-left: 30px; width: calc(100% - 26px); font-family: "Jost-Book"; }
@@ -335,7 +340,7 @@ a.site__menu__icon { display: none; }
 .right-header__button a { color: #ffffff; font-weight: 500; font-family: "Jost-Book"; display: block; }
 
 .site-banner { height: 500px; background-color: #F5F5F5; background-repeat: no-repeat; background-position: right 30px bottom; }
-.site-banner .container { position: relative; height: 100%; z-index: 7; }
+.site-banner .container { position: relative; height: 70%; z-index: 7; }
 .site-banner .site-banner__content { position: absolute; top: 50%; transform: translateY(-50%); left: 15px; right: 15px; }
 
 .site-banner.layout-02 { background-position: bottom right; background-repeat: no-repeat; background-size: 50vw auto; height: 100vh; background-color: #F5F8FD; }
@@ -2320,6 +2325,7 @@ a.place__comments__reply i { display: inline-block; vertical-align: middle; marg
 
 .title-wrap { margin-bottom: 40px; }
 .title-wrap h2 { font-size: 28px; font-weight: 500; margin-bottom: 10px; }
+.title-wrap1 h2 { font-size: 25px; font-weight: 500; margin-bottom: 10px; }
 .title-wrap p { font-size: 18px; }
 
 .places-wrap { padding-top: 60px; padding-bottom: 100px; }
