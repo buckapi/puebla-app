@@ -13,6 +13,8 @@ export class AppComponent implements AfterViewInit {
   title = 'pueblapp';
   packs:any;
   categories:any;
+  isHovered: boolean = false;
+  showDescription: boolean = false;
   constructor(
     public script:ScriptService
   ) {

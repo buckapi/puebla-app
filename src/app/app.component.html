@@ -28,7 +28,7 @@
                                                   <li><a href="#" title="Barcelona">Catedral basílica de puebla</a></li>
                                                   <li><a href="#" title="Amsterdam">Museo amparo</a></li>
                                                   <li><a href="#" title="Los Angeles">Callejon de los sapos</a></li>
-                                                  <li><a href="#" title="London">Mercado el parian</a></li>
+                                                  <li><a href="#" title="Puebla">Mercado el parian</a></li>
                                                   
                                               </ul>
                                           </li>
@@ -254,26 +254,19 @@
             <h2 class="cities__title title offset-item">Sitios Populares</h2>
             <div class="cities__content offset-item">
                 <div class="row">
-                    <div class="col-lg-3 col-sm-6" *ngFor="let pack of packs; let index = index">
+                    <div class="col-lg-3 col-sm-6" *ngFor="let pack of packs; let index = index" style="cursor: pointer;">
                         <div class="cities__item hover__box">
                           <div class="cities__thumb hover__box__thumb">
-                            <a title="London" href="ex-half-map-1.html">
+                            <a title="Puebla" href="ex-half-map-1.html">
                               <img [src]="pack.images[0]" alt="Tokyo">
                             </a>
+                            <div class="black-overlay"></div>
                           </div>
                           <h4 class="cities__name">{{ pack.name }}</h4>
                           <div class="cities__info">
                             <h3 class="cities__capital">{{ pack.location }}</h3>
-                            <p class="cities__number">{{ pack.entries }} entradas</p>
-
-                            <p class="cities__description">{{ pack.description }}</p> <!-- Nueva línea agregada -->
-                            <div class="right-header__button btn" style="background-color: #198754;">
-                                <a title="Add place">
-                                    <i class="las la-cart-arrow-down "></i>
-                                    <span>Ver detalles</span>
-                                </a>
-                            </div>  
-                        </div>
+                            <p class="cities__number hidden-description">{{ pack.shortDescription.slice(0, 150) }} </p>
+                          </div>
                         </div>
                       </div>
                       

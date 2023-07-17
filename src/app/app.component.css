@@ -69,5 +69,26 @@
     padding: 5px 5px;
     opacity: 0.8;
   }
+  .hidden-description {
+    display: none;
+  }
   
+  .hover__box:hover .hidden-description {
+    display: block;
   
+    
+  }
+  .cities__thumb {
+  position: relative;
+}
+
+.cities__thumb:hover::after {
+  content: "";
+  position: absolute;
+  top: 60%;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  background-color: rgba(0, 0, 0, 0.6); /* Fondo negro translúcido */
+  z-index: 0;
+}
