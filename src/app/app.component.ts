@@ -11,13 +11,19 @@ import { ScriptService } from './services/script.service';
 })
 export class AppComponent implements AfterViewInit {
   title = 'pueblapp';
+  isMobile:any;
   packs:any;
   categories:any;
   isHovered: boolean = false;
   showDescription: boolean = false;
+
   constructor(
     public script:ScriptService
   ) {
+    this.checkIfMobile();
+    window.addEventListener('resize', () => {
+      this.checkIfMobile();
+    });
     this.packs=PACKS
     this.categories=CATEGORIES
     this.script.load(
@@ -36,8 +42,11 @@ export class AppComponent implements AfterViewInit {
     'main'
            )
   }
-
+  checkIfMobile() {
+    this.isMobile = window.innerWidth <= 767;
+  }
   ngAfterViewInit() {
+   
     // Método ngAfterViewInit que se ejecuta después de que la vista se haya inicializado
   }
 }

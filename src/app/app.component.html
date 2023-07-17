@@ -53,7 +53,7 @@
                   <div class="right-header align-right">
                      
                       <div class="right-header__login">
-                          <a title="Login" class="open-login" >Ingresar</a>
+                          <a title="Login" class="open-login" style="cursor: pointer;" >Ingresar</a>
                       </div><!-- .right-header__login -->
                       <div class="right-header__button btn">
                         <a title="Add place">
@@ -66,11 +66,11 @@
                               <i class="las la-times la-24-black"></i>
                           </a><!-- .popup__close -->
                           <ul class="choose-form">
-                              <li class="nav-signup"><a title="Sign Up" href="index.html#signup">Sign Up</a></li>
-                              <li class="nav-login"><a title="Log In" href="index.html#login">Log In</a></li>
+                              <!-- <li class="nav-signup"><a title="Sign Up" href="index.html#signup">Sign Up</a></li> -->
+                              <li class="nav-login"><a title="Log In" href="index.html#login">Inicio de sessión</a></li>
                           </ul>
-                          <p class="choose-more">Continue with <a title="Facebook" class="fb" >Facebook</a> or <a title="Google" class="gg" >Google</a></p>
-                          <p class="choose-or"><span>Or</span></p>
+                          <!-- <p class="choose-more">Continue with <a title="Facebook" class="fb" >Facebook</a> or <a title="Google" class="gg" >Google</a></p> -->
+                          <!-- <p class="choose-or"><span>Or</span></p> -->
                           <div class="popup-content">
                               <form action="index.html#" class="form-sign form-content" id="signup">
                                   <div class="field-inline">
@@ -100,13 +100,13 @@
                               </form>
                               <form action="index.html#" class="form-log form-content" id="login">
                                   <div class="field-input">
-                                      <input type="text" placeholder="Username or Email" value="" name="user">
+                                      <input type="text" placeholder="Email" value="" name="user">
                                   </div>
                                   <div class="field-input">
-                                      <input type="password" placeholder="Password" value="" name="password">
+                                      <input type="password" placeholder="Contraseña" value="" name="password">
                                   </div>
-                                  <a title="Forgot password" class="forgot_pass" >Forgot password</a>
-                                  <input type="submit" name="submit" value="Login">
+                                  <!-- <a title="Forgot password" class="forgot_pass" >Forgot password</a> -->
+                                  <input type="submit" name="submit" value="Entrar">
                               </form>
                           </div>
                       </div><!-- .popup-form -->
@@ -138,7 +138,7 @@
       <div class="site-banner" style="background-image: url(assets/assetspuebla/images/bg/top-banner.png);">
           <div class="container">
               <div class="site-banner__content page-container">
-                  <h1 class="site-banner__title tittle" >Descubre la magia de Puebla en un viaje inolvidable.</h1>
+                  <h1 class="site-banner__title tittle" [style.margin-top]="isMobile ? '20% !important' : 'initial'" id="mobile-specific-div">Descubre la magia de Puebla en un viaje inolvidable.</h1>
                   <h2>Personalizado, seguro y sin barreras lingüísticas</h2>
                   
                  <!-- <form action="index.html#" class="site-banner__search layout-02">
@@ -239,7 +239,7 @@
                               <a >
                                   <img src="assets/assetspuebla/images/workspace/cat-03.jpg" alt="">
                                   <span class="info">
-                                      <span class="cities__name1">Tuor completo por Puebla <i class="las la-search-location la-24-black"></i></span>
+                                      <span class="cities__name1">Tour completo por Puebla <i class="las la-search-location la-24-black"></i></span>
                                       <img src="assets/assetspuebla/images/workspace/cat-line-03.png" alt="">
                                   </span>
                               </a>
@@ -284,7 +284,8 @@
           <div class="container">
               <div class="banner-apps__content">
                   <h2 class="banner-apps__title offset-item">Tour gastronómico</h2>
-                  <p class="banner-apps__desc offset-item" style="width: 66%;">Descubre los sabores de Puebla en un tour gastronómico único, 
+                  
+                  <p class="banner-apps__desc offset-item" style="width: 66%;" >Descubre los sabores de Puebla en un tour gastronómico único, 
                    durante toda tu estancia. podrás pobrar los platillos más típicos y visitar lugares espectaculares</p>
                   <form action="#" class="shop-details__addcart">
                    
