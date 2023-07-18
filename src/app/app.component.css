@@ -97,3 +97,14 @@
     margin-top: 80% !important;
   }
 }
+@media (max-width: 767px) {
+  #mobile-specific-div {
+    font-size: 40px;
+  }
+}
+
+@media (max-width: 767px) {
+  .title {
+    font-size: 24px; /* Tamaño de fuente más pequeño para dispositivos móviles */
+  }
+}
