@@ -100,6 +100,7 @@
 @media (max-width: 767px) {
   #mobile-specific-div {
     font-size: 40px;
+    max-width: 100%;
   }
 }
 
@@ -108,3 +109,27 @@
     font-size: 24px; /* Tamaño de fuente más pequeño para dispositivos móviles */
   }
 }
+@media (max-width: 768px) {
+  .banner-apps__desc {
+    width: 100%;
+  }
+}
+@media (max-width: 768px) {
+  .customized-languaje {
+    text-align: initial;
+    padding-left: 4px;
+    padding-bottom: 20px;
+    width: 64%;
+  }
+}
+@media (max-width: 768px) {
+  .img-vans {
+    width: 20%;
+  }
+}
+
+.img-vans {
+  width: 10%;
+                  opacity: 0.5;
+}
+

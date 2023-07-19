@@ -388,9 +388,10 @@ a.site__menu__icon { display: none; }
 
 .banner-apps { background-position: center; background-repeat: no-repeat; background-size: cover; padding: 123px 0 173px; }
 
-.banner-apps__content { padding-left: 100px; }
+.banner-apps__content { padding-left: 10px; }
+
 .banner-apps__content .banner-apps__title { font-size: 48px; font-weight: 500; color: #1a1a1a; line-height: 66px; margin-bottom: 5px; }
-.banner-apps__content .banner-apps__desc { font-size: 24px; color: #1a1a1a; line-height: 33px; font-family: "Jost-Book"; margin-bottom: 40px; }
+.banner-apps__content .banner-apps__desc { font-size: 24px; color: #1a1a1a; line-height: 33px; font-family: "Jost-Book"; margin-bottom: 40px;     width: 70%;}
 .banner-apps__content .banner-apps__download > a { max-width: 200px; display: inline-block; margin-right: 20px; }
 .banner-apps__content .banner-apps__download > a:last-child { margin-right: 0; }
 
