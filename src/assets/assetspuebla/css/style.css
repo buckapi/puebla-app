@@ -340,7 +340,7 @@ a.site__menu__icon { display: none; }
 .right-header__button svg { vertical-align: -1px; margin-right: 2px; }
 .right-header__button a { color: #ffffff; font-weight: 500; font-family: "Jost-Book"; display: block; }
 
-.site-banner { height: 500px; background-color: #F5F5F5; background-repeat: no-repeat; background-position: right 30px bottom; }
+.site-banner { height: 600px; background-color: #F5F5F5; background-repeat: no-repeat; background-position: right 30px bottom; }
 .site-banner .container { position: relative; height: 70%; z-index: 7; }
 .site-banner .site-banner__content { position: absolute; top: 50%; transform: translateY(-50%); left: 15px; right: 15px; }
 
@@ -2481,3 +2481,4 @@ a.place__comments__reply i { display: inline-block; vertical-align: middle; marg
 .xdsoft_inline { position: absolute; top: 100%; left: 0; right: 0; position: absolute; }
 
 /*# sourceMappingURL=style.css.map */
+

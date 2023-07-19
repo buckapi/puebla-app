@@ -16,6 +16,7 @@ export class AppComponent implements AfterViewInit {
   categories:any;
   isHovered: boolean = false;
   showDescription: boolean = false;
+  showScrollUpButton = false;
 
   constructor(
     public script:ScriptService
