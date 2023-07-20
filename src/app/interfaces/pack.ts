@@ -6,6 +6,8 @@ export interface Pack{
 	shortDescription?:string;
 	status?:string;
 	images:string[]; 
-	entradas?:number;
+	valid?:number;
 	promocionado?:boolean;
+	duration: string;
+	cost: string;
 }
