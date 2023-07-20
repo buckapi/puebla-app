@@ -22,7 +22,7 @@ export const PACKS: Pack[] = [
     promocionado: false,
     duration: "4 days", 
     cost: "2000 USD$",
-    images: ["assets/assetspuebla/images/city/tokyo.jpeg"]
+    images: ["assets/assetspuebla/images/city/sydney.jpg"]
   },
   {
     name: "Puebla Package ",
@@ -33,7 +33,7 @@ export const PACKS: Pack[] = [
     promocionado: false,
     duration: "4 days", 
     cost: "2000 USD$", 
-    images: ["assets/assetspuebla/images/city/tokyo.jpeg"]
+    images: ["assets/assetspuebla/images/city/singapo.jpg"]
   },
   {
     name: "Services",
