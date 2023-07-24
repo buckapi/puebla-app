@@ -83,6 +83,15 @@
     align-items: flex-end;
     margin-left: 55%;
   }
+  .view1 {
+    background-color: #000000;
+    border-radius: 10px;
+    padding: 5px 10px;
+    
+    text-align: center;
+    align-items: flex-end;
+    color: #fff;
+  }
   .hidden-description {
     display: none;
     color: #eeeeee;

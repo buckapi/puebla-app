@@ -4,6 +4,8 @@ import { CATEGORIES } from '@app/services/categories.service';
 import { ScriptService } from '@app/services/script.service';
 import { Yeoman } from '@app/services/yeoman.service';
 import { HttpClient } from '@angular/common/http';
+import { Router } from '@angular/router';
+import { travel } from '@app/services/travel.service';
 
 @Component({
   selector: 'app-home',
@@ -18,10 +20,11 @@ export class HomeComponent implements AfterViewInit {
   isHovered: boolean = false;
   showDescription: boolean = false;
   showScrollUpButton = false;
-
+  travel:any
   constructor(
     public script:ScriptService,
-    public yeoman:Yeoman
+    public yeoman:Yeoman,
+    private router:Router
   ) {
 
     this.checkIfMobile();
@@ -30,6 +33,7 @@ export class HomeComponent implements AfterViewInit {
     });
     this.packs=PACKS
     this.categories=CATEGORIES
+    this.travel=travel
     this.script.load(
     'jquery', 
     'popper',
@@ -48,6 +52,10 @@ export class HomeComponent implements AfterViewInit {
   }
   checkIfMobile() {
     this.isMobile = window.innerWidth <= 767;
+  }
+  setPreview(index:any){
+    this.yeoman.preview=this.packs[index];
+    this.router.navigate(['/packs']);
   }
 
   ngAfterViewInit(): void {

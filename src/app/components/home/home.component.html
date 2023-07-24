@@ -75,14 +75,19 @@
         </section><!-- .features -->
         <section class="list-categories">
             <div class="container">
+                <!-- <div class="title-wrap align-center">
+                    <h2>Are you in Puebla and require any of these services?</h2>
+                    <span style="display: block; text-align: center;"><h2  class="title-wrap1">Exclusive tour which combines transportation, translators and an unforgettable tour of the most outstanding places</h2></span>              
+                </div> -->
                 <div class="title-wrap align-center">
                     <h2>Are you in Puebla and require any of these services?</h2>
-                    <span style="display: block; text-align: center;"><h2  class="title-wrap1">Exclusive tour which combines transportation, translators and an unforgettable tour of the most outstanding places</h2></span>              </div>
+                    <p>Exclusive tour which combines transportation, translators and an unforgettable tour of the most outstanding places</p>
+                </div>
                 <div class="inner">
                     <div class="row">
                         <div class="col-12 col-lg-4">
                             <div class="item hover__box">
-                                <a >
+                                <a routerLink="/traslation">
                                     <img src="assets/assetspuebla/images/workspace/cat-01.jpg" alt="">
                                     <span class="info">
                                         <span class="cities__name1">Translation services<i class="las la-language"></i></span>
@@ -93,7 +98,7 @@
                         </div>
                         <div class="col-12 col-lg-4">
                             <div class="item hover__box">
-                                <a >
+                                <a routerLink="/travel">
                                     <img src="assets/assetspuebla/images/workspace/cat-02.jpg" alt="">
                                     <span class="info">
                                         <span class="cities__name1">Transportation service<i class="las la-bus"></i></span>
@@ -104,7 +109,7 @@
                         </div>
                         <div class="col-12 col-lg-4">
                             <div class="item hover__box">
-                                <a >
+                                <a routerLink="/guided">
                                     <img src="assets/assetspuebla/images/workspace/cat-03.jpg" alt="">
                                     <span class="info">
                                         <span class="cities__name1">Guided tour around Puebla<i class="las la-search-location la-24-black"></i></span>
@@ -122,7 +127,7 @@
               <h2 class="cities__title title offset-item">Popular sites packages </h2>
               <div class="cities__content offset-item">
                   <div class="row">
-                    <div class="col-lg-4 col-sm-12" *ngFor="let pack of packs.slice(0, 8); let index = index">
+                    <div class="col-lg-4 col-sm-12" *ngFor="let pack of packs.slice(0, 8); let index = index"> 
                         <div class="cities__item hover__box">
                           <div class="cities__thumb hover__box__thumb">
                             <a title="Puebla">
@@ -135,40 +140,80 @@
                             <p class="cities__description hidden-description" style="max-height: 100px; overflow: hidden;"><strong style="font-weight: bold;">Preview: </strong>{{ pack.shortDescription }}</p>
                             <p class="cities__valid hidden-description" ><strong style="font-weight: bold;"> Duration: </strong>{{ pack.duration }}</p>
                             <p class="cities__view hidden-description" ><strong style="font-weight: bold;">Valid:</strong> {{ pack.valid }} persons </p>
-                            <h4 class="cities__number hidden-description view" style=" cursor: pointer;">View more</h4>
+                            <h4 class="cities__number hidden-description view" style=" cursor: pointer;" (click)="setPreview(index)">View more</h4>
                           </div>
                         </div>
                     </div>
-                      
-                      
-                      
-                      <!-- <div class="col-lg-4 col-sm-12" *ngFor="let pack of packs.slice(0, 8); let index = index">
-                          <div class="cities__item hover__box">
-                            <div class="cities__thumb hover__box__thumb">
-                              <a title="Puebla" >
-                                <img [src]="pack.images[0]" alt="Tokyo">
-                              </a>
-                              <div class="black-overlay"></div>
-                            </div>
-                            <h3 class="cities__name">{{ pack.name }}</h3>
-                            
-                            <div class="cities__info">
-                              <p class="cities__number hidden-description">{{ pack.shortDescription.slice(0, 150) }} </p>
-                              <h4 class="cities__number hidden-description" style="margin-right: 20px; text-align: right; cursor: pointer;">View all</h4>
-  
-                              
-                            </div>
+                    <div class="col-lg-4 col-sm-12"> 
+                        <div class="cities__item hover__box">
+                          <div class="cities__thumb hover__box__thumb">
+                            <a title="Puebla">
+                              <img src="assets/assetspuebla/images/city/tokyo.jpeg" alt="Tokyo">
+                            </a>
+                            <div class="black-overlay"></div>
                           </div>
-                        </div> -->
-                        
-                        
-                  
+                          <h3 class="cities__name">Individual Services</h3>
+                          <div class="cities__info">
+                            <p class="cities__description hidden-description" style="max-height: 100px; overflow: hidden;"><strong style="font-weight: bold;">Preview: Transportation CDMX-PUEBLA-AIRPORT</strong></p>
+                           
+                            <h4 class="cities__number hidden-description view" style=" cursor: pointer;" >Request</h4>
+                          </div>
+                        </div>
+                    </div>
                   </div>
               </div><!-- .cities__content -->
           </div>
-      </div><!-- .cities -->
+        </div><!-- .cities -->
        
-        <div class="banner-apps" style="background-image: url(assets/assetspuebla/images/bg/bg-app-1.jpg);">
+        
+            <section class="places-wrap">
+                <div class="container">
+                    <div class="title-wrap align-center">
+                        <h2>Individual Services</h2>
+                        <p>Transportation</p>
+                    </div>
+                    <div class="area-places">
+                        <div class="place-item layout-02 place-hover" data-maps_name="mattone_restaurant" *ngFor="let transport of travel.slice(0, 8); let index = index">
+                            <div class="place-inner">
+                                <div class="place-thumb hover-img">
+                                    <a class="entry-thumb" ><img [src]="transport.images[0]" alt=""></a>
+                                    <a class="golo-add-to-wishlist btn-add-to-wishlist " data-place-id="185">
+                                        <span class="icon-heart">
+                                            <i class="la la-bus"></i>
+                                        </span>                                    
+                                    </a>       
+                                    <div class="feature">Transportation</div>
+                                    <!-- Add the new "Solicitar" button below -->
+                                    
+                                </div>       
+                                <div class="entry-detail">
+                                    <h3 class="place-title"><a>{{transport.name}}</a></h3>
+                                    <div class="entry-address"><i class="las la-map-marker"></i>1{{transport.travel}}</div>
+                                    <div class="entry-bottom">
+                                        <div class="place-price">
+                                            <span>$$ {{transport.cost}}</span>
+                                        </div>
+                                        <div class="place-preview">
+                                            <div class="place-rating">
+                                                <span>5.0</span>
+                                                <i class="la la-star"></i>
+                                            </div>
+                                            <a class="btn-solicitar view1" style=" cursor: pointer;" >
+                                                <span>Request</span>
+                                            </a>
+                                        </div>
+                                       
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    
+                    </div>
+                </div>
+            </section>
+        
+        <div class="banner-apps" style="background-image: url(assets/assetspuebla/images/bg/bg-join-us.jpg);">
             <div class="container">
                 <div class="banner-apps__content">
                     <h2 class="banner-apps__title offset-item">Gastronomic Tour</h2>
@@ -183,8 +228,11 @@
         </div><!-- .banner-apps -->
         <div class="trending trending-business">
             <div class="container">
-              <h2 class="title title-border-bottom align-center offset-item animate" id="mobile-platillo">Popular dishes in Puebla <br> Estos y más platillos se degustan en Puebla</h2>
-                
+              <!-- <h2 class="title title-border-bottom align-center offset-item animate" id="mobile-platillo"> <br> Estos y más platillos se degustan en Puebla</h2> -->
+              <div class="title-wrap align-center">
+                <h2>Popular dishes in Puebla</h2>
+                <p>These and more dishes are tasted in Puebla</p>
+            </div>
                 <div class="restaurant-sliders slick-sliders offset-item">
                   <div class="restaurant-slider slick-slider" data-item="4" data-itemScroll="4" data-arrows="true" data-dots="true" data-tabletItem="2" data-tabletScroll="2" data-mobileItem="1" data-mobileScroll="1">
                       <div class="place-item layout-02 place-hover" data-maps_name="mattone_restaurant">

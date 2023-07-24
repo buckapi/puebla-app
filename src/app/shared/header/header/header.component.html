@@ -14,28 +14,15 @@
                             </a><!-- .popup__close -->
                             <div class="popup__content">
                                 <div class="popup__user popup__box open-form">
-                                    <a title="Login"  class="open-login">Ingresar</a>
-                                    <a title="Sign Up"  class="open-signup">Registrarse</a>
+                                    <a title="Login"  class="open-login">Login</a>
                                 </div><!-- .popup__user -->
-                                <div class="popup__destinations popup__box">
-                                    <ul class="menu-arrow">
-                                        <li>
-                                            <a title="Destinations" >Destinos </a>
-                                            <ul class="sub-menu">
-                                                <li><a href="#" title="Tokyo">Capilla del rosario</a></li>
-                                                <li><a href="#" title="New York">Zócalo de puebla</a></li>
-                                                <li><a href="#" title="Barcelona">Catedral basílica de puebla</a></li>
-                                                <li><a href="#" title="Amsterdam">Museo amparo</a></li>
-                                                <li><a href="#" title="Los Angeles">Callejon de los sapos</a></li>
-                                                <li><a href="#" title="Puebla">Mercado el parian</a></li>
-                                                
-                                            </ul>
-                                        </li>
-                                    </ul>
-                                </div>
+                                
                                 <div class="popup__menu popup__box">
                                     <ul class="menu-arrow">
-                                        
+                                      <li routerLink="/">Home</li>
+                                      <li routerLink="/guided">Guided tour</li>
+                                      <li routerLink="/translation">Translator</li>
+                                      <li routerLink="/travel">Transport</li>  
                                     </ul>
                                   </div>
                             </div>
@@ -52,14 +39,24 @@
                 <div class="right-header align-right">
                    
                     <div class="right-header__login">
-                        <a title="Login" class="open-login" style="cursor: pointer;" >Ingresar</a>
+                        <a title="guidedtravel" style="cursor: pointer;" routerLink="/">Home</a>
                     </div><!-- .right-header__login -->
+                    <div class="right-header__login">
+                        <a title="Login" class="open-login" style="cursor: pointer;" >Login</a>
+                    </div>
                     <div class="right-header__button btn">
                       <a title="Add place">
                           <i class="las la-cart-arrow-down "></i>
-                          <span>Comprar paquete</span>
+                          <span>Cars</span>
                       </a>
                   </div>
+                  <div class="right-header__button btn">
+                    <a title="whatsapp" href="https://wa.me/+5212216482271?text=Hola!!%20Quiero%20solicitar%20un%20servicio"  target="_blank" title="Support" style="color: white;"> 
+                        
+                        <i class="la la-whatsapp"></i>
+                    </a>
+                  </div>
+                  
                     <div class="popup popup-form">
                         <a title="Close"  class="popup__close">
                             <i class="las la-times la-24-black"></i>
@@ -110,24 +107,26 @@
                         </div>
                     </div><!-- .popup-form -->
                     <div class="right-header__search">
-                        <a title="Search"  class="search-open">
-                            <i class="las la-search la-24-black"></i>
+                        <a title="whatsapp" href="https://wa.me/+5212216482271?text=Hola!!%20Quiero%20solicitar%20un%20servicio"  target="_blank" title="Support" style="color: white;"> 
+                            >
+                            <i class="la la-whatsapp"></i>
                         </a>
-                        <div class="site__search">
+                       
+                        <!-- <div class="site__search">
                             <a title="Close"  class="search__close">
                                 <i class="la la-times"></i>
-                            </a><!-- .search__close -->
+                            </a>
                             <form action="index.html#" class="site__search__form" method="GET">
                                 <div class="site__search__field">
                                     <span class="site__search__icon">
                                         <i class="las la-search la-24-black"></i>
-                                    </span><!-- .site__search__icon -->
+                                    </span>
                                     <input class="site__search__input" type="text" name="s" placeholder="Search places, cities">
-                                </div><!-- .search__input -->
-                            </form><!-- .search__form -->
-                        </div><!-- .site__search -->
+                                </div>
+                            </form>
+                        </div> -->
                     </div>
-                   </div><!-- .right-header -->
+                   </div>
             </div><!-- .col-md-6 -->
         </div><!-- .row -->
     </div><!-- .container-fluid -->

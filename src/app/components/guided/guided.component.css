@@ -1,0 +1,33 @@
+.view {
+    background-color: #000000;
+    border-radius: 10px;
+    padding: 5px 10px;
+    width: 40%;
+    text-align: center;
+    align-items: flex-end;
+    margin-left: 55%;
+  }
+
+  .hidden-description {
+    display: none;
+    color: #eeeeee;
+    margin-bottom:  5px;
+    font-size: 18px;
+    
+  }
+  
+  .hover__box:hover .hidden-description {
+    display: block;
+  
+    
+  }
+  .cities__thumb:hover::after {
+    content: "";
+    position: absolute;
+    top: 0%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* Fondo negro translúcido */
+    z-index: 0;
+  }

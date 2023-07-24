@@ -327,7 +327,8 @@
 		padding: 0 15px;
 	}
 	.right-header .right-header__search i{
-		font-size: 24px;
+		font-size: 30px;
+		color: #198754;
 	}
 	.archive-city .archive-filter,
 	.archive-city .col-right{

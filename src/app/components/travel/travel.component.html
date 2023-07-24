@@ -1,0 +1,199 @@
+
+    <div class="page-title" style="background-image: url(assets/assetspuebla/images/city/paris-lager.jpg);">
+        <div class="container">
+            <div class="page-title__content">
+                <h4 class="page-title__capita">Transportation services</h4>
+                <h1 class="page-title__name">Puebla - México</h1>
+                <p class="page-title__slogan">Guided travel</p>
+            </div>
+        </div>	
+    </div><!-- .page-title -->
+    <div class="intro">
+        <div class="container">
+            <h2 class="title">What it is about?</h2>
+            <div class="intro__content">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="intro__text">Highly qualified driver, perfectly equipped van, available for you throughout your stay" describes a service that offers a skilled and capable driver, a van equipped with everything needed, and the convenience of having this service at your disposal for the entire duration of your stay. Whether you need transportation for business or leisure, this service ensures that you have a reliable and competent driver and a well-prepared van to meet your travel needs during your entire stay.</div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="intro__meta">
+                            <div class="row">
+                                <div class="col-4 col-sm-4">
+                                    <div class="intro__meta__item">
+                                        <h3>Currency</h3>
+                                        <p>
+                                            <i class="la la-money-bill"></i>
+                                            <span>U.S. dollar</span>
+                                        </p>
+                                    </div><!-- .intro__meta__item -->
+                                </div>
+                                <div class="col-4 col-sm-4">
+                                    <div class="intro__meta__item">
+                                        <h3>Languages</h3>
+                                        <p>
+                                           <li><i class="la la-globe"></i> <span>English</span></li>
+                                           <li><i class="la la-globe"></i><span>Spanish</span></li>
+                                        </p>
+                                    </div><!-- .intro__meta__item -->
+                                </div>
+                                <div class="col-4 col-sm-4">
+                                    <div class="intro__meta__item">
+                                        <h3>Availability</h3>
+                                        <p>
+                                            <i class="la la-clock"></i>
+                                            <span>During the tours</span>
+                                        </p>
+                                    </div><!-- .intro__meta__item -->
+                                </div>
+                            </div>
+                        </div><!-- .intro__meta -->
+                    </div>
+                </div>
+            </div><!-- .intro__content -->
+            <div class="intro__content">
+                <div class="row">
+                    <div class="col-lg-6 place__box">
+                        <h3>Contact Info</h3>
+                        <ul class="place__contact">
+                            <li>									
+                                <i class="la la-phone"></i>
+                                <a title="+1 123 123" href="tel:003437859">+1 123 123</a>
+                            </li>
+                            <li>											
+                                <i class="la la-globe"></i>
+                                <a title="www.guidedtravelmx.com" href="#">www.guidedtravelmx.com</a>
+                            </li>
+                            <li>											
+                                <i class="la la-facebook-f"></i>
+                                <a title="fb.com/abc" href="#">facebook.com/guidedtravel</a>
+                            </li>
+                            <li>											
+                                <i class="la la-instagram"></i>
+                                <a title="instagram.com/abc" href="#">instagram.com/guidedtravel</a>
+                            </li>
+                        </ul>
+                    </div><!-- .place__box -->
+                
+                    <div class="col-lg-6 place__box">
+                        <h3>FAQ's</h3>
+                        <ul class="faqs-accordion">
+                            <li>									
+                                <h4>What are the ingredients or taste profile for the signature sauce?</h4>
+                                <div class="desc"><p>We are currently offering free shipping throughout Northern California on all orders over $80. Peninsula to San Francisco can receive next day delivery.</p></div>
+                            </li>
+                            <li>											
+                                <h4>How far does free delivery extend to? To San Francisco?</h4>
+                                <div class="desc"><p>We are currently offering free shipping throughout Northern California on all orders over $80. Peninsula to San Francisco can receive next day delivery.</p></div>
+                            </li>
+                            <li>											
+                                <h4>How far does free delivery extend to? To San Francisco?</h4>
+                                <div class="desc"><p>We are currently offering free shipping throughout Northern California on all orders over $80. Peninsula to San Francisco can receive next day delivery.</p></div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <section class="places-wrap">
+        <div class="container">
+            <div class="title-wrap align-center">
+                <h2>Individual Services</h2>
+                <p>Transportation</p>
+            </div>
+            <div class="area-places">
+                <div class="place-item layout-02 place-hover" data-maps_name="mattone_restaurant" *ngFor="let transport of travel.slice(0, 8); let index = index">
+                    <div class="place-inner">
+                        <div class="place-thumb hover-img">
+                            <a class="entry-thumb" ><img [src]="transport.images[0]" alt=""></a>
+                            <a  class="golo-add-to-wishlist btn-add-to-wishlist " data-place-id="185">
+                                <span class="icon-heart">
+                                    <i class="la la-bus"></i>
+                                </span>                                    
+                            </a>       
+                            
+                        
+                            <div class="feature">Transportation</div>
+                        </div>       
+                        <div class="entry-detail">
+                            
+                            <h3 class="place-title"><a >{{transport.name}}</a></h3>
+                            <div class="entry-address"><i class="las la-map-marker"></i>{{transport.travel}}</div>
+                            <div class="entry-bottom">
+                                <div class="place-price">
+                                    <span>$$ {{transport.cost}}</span>
+                                </div>
+                                <div class="place-preview">
+                                    <div class="place-rating">
+                                        <span>5.0</span>
+                                        <i class="la la-star"></i>
+                                    </div>
+                                    <a class="btn-solicitar view1">
+                                        <span>Request</span>
+                                    </a>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+            </div>
+        </div>
+    </section>
+    
+    <!-- <section class="places-wrap">
+        <div class="container">
+            <div class="title-wrap align-center">
+                <h2>Individual Services</h2>
+                <p>Transportation</p>
+            </div>
+            <div class="slick-sliders offset-item" *ngFor="let transport of travel.slice(0, 8); let index = index">
+                <div class="slick-slider trending-slider slider-pd30" data-item="4" data-arrows="true" data-itemScroll="1" data-dots="true" data-centerPadding="30" data-tabletitem="2" data-mobileitem="1" data-mobilearrows="false">
+                    <div class="place-item layout-02 place-hover">
+                        <div class="place-inner">
+                            <div class="place-thumb hover-img">
+                                <a class="entry-thumb" ><img [src]="transport.images[0]" alt=""></a>
+                                <a  class="golo-add-to-wishlist btn-add-to-wishlist " data-place-id="185">
+                                    <span class="icon-heart">
+                                        <i class="la la-bus"></i>
+                                    </span>                                    
+                                </a>       
+                                
+                               
+                                <div class="feature">Transportation</div>
+                            </div>       
+                            <div class="entry-detail">
+                                
+                                <h3 class="place-title"><a >{{transport.name}}</a></h3>
+                                <div class="entry-address"><i class="las la-map-marker"></i>1{{transport.travel}}</div>
+                                <div class="entry-bottom">
+                                    <div class="place-preview">
+                                        <div class="place-rating">
+                                            <span>5.0</span>
+                                            <i class="la la-star"></i>
+                                        </div>
+                                        <span class="count-reviews">(2 Reviews)</span>
+                                    </div>
+                                    <div class="place-price">
+                                        <span>$$ {{transport.cost}}</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                   
+                </div>
+                <div class="place-slider__nav slick-nav">
+                    <div class="place-slider__prev slick-nav__prev">
+                        <i class="la la-arrow-left"></i>
+                    </div>
+                    <div class="place-slider__next slick-nav__next">        
+                        <i class="la la-arrow-right"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> -->
+
