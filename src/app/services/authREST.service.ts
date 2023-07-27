@@ -103,6 +103,18 @@ export class AuthRESTService {
     if (user_string) {
       let user: UserInterface = JSON.parse(user_string);
       this.yeoman.currentUser=user;
+      
+      if(user.email==='undefined'){
+        // this.yeoman.userType='admin';
+        console.log("userType: "+this.yeoman.userType)
+          //  this.getAllUsers();
+        }
+      
+        if(user.email!=='undefined'){
+          // this.yeoman.userType='customer';    
+          // this.currentUser = this.authRESTService.getBookingsByUserEmail(this.yeoman.currentUser.email);
+       
+        }
       return user;
     } else {
       return null;

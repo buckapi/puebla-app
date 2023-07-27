@@ -69,6 +69,7 @@ export class PacksComponent implements OnInit, AfterViewInit {
           (bookingData) => {
             // Aquí puedes manejar la respuesta de la API después de crear el nuevo documento en /booking
             console.log('Nuevo documento creado en /booking:', bookingData);
+            this.yeoman.userType='customer';
             this.router.navigate(['my'])
           },
           (error) => {

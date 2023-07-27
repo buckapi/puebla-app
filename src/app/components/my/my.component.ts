@@ -23,9 +23,10 @@ export class MyComponent implements OnInit, AfterViewInit {
 
     if (currentUser) {
       // Si hay un usuario registrado, puedes acceder a sus datos aquí
-      console.log('Usuario registrado:', currentUser);
+      console.log('Usuario registradoreicohp:', yeoman.userType);
+      
   this.yeoman.currentUser=currentUser;
-  
+ 
       // Resto del código que desees realizar con los datos del usuario...
   
     } else {
@@ -67,12 +68,12 @@ ngAfterViewInit(): void {
   this.getAllBookings();
   this.authRESTService.getCurrentUser() ;
   if(this.yeoman.currentUser.email==='admin@email.com'){
-  
+  // this.yeoman.userType='admin';
      this.getAllUsers();
   }
 
   if(this.yeoman.currentUser.email!=='admin@email.com'){
-    
+    // this.yeoman.userType='customer';    
     // this.currentUser = this.authRESTService.getBookingsByUserEmail(this.yeoman.currentUser.email);
  
   }

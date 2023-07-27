@@ -19,8 +19,8 @@
 							<!-- <h2 *ngIf="currentUser?.user?.email &&  (currentUser?.user.email=='admin@email.com')">Welcome back! {{ currentUser?.user.email }}</h2> -->
 							<!-- <p>You are current FREE plan. <a >Upgrade now</a></p> -->
 						</div><!-- .member-wrap-top -->
-						<div class="upgrade-box" >
-							<h1 >Booking for </h1>
+						<div class="upgrade-box"  *ngIf="yeoman.userType==='customer'">
+							<h1 >My Booking  </h1>
 							<!-- <p>more text.</p>   -->
 							<!-- <a  class="btn" title="Upgrade now">Upgrade now</a> -->
 							<img src="assets/assetspuebla/images/img-people.svg" alt="Upgrade now">
