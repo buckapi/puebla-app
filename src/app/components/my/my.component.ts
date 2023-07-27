@@ -67,7 +67,7 @@ ngAfterViewInit(): void {
   this.getAllBookings();
   if(this.yeoman.currentUser.email==='admin@email.com'){
   
-    // this.getAllUsers();
+     this.getAllUsers();
   }
 
   if(this.yeoman.currentUser.email!=='admin@email.com'){

@@ -20,8 +20,8 @@
 							<!-- <p>You are current FREE plan. <a >Upgrade now</a></p> -->
 						</div><!-- .member-wrap-top -->
 						<div class="upgrade-box" *ngIf="yeoman.currentUser?.user.name ">
-							<h1 *ngIf="yeoman.currentUser">Text for {{yeoman.currentUser.user.name}}</h1>
-							<p>more text.</p>
+							<h1 *ngIf="yeoman.currentUser">Booking for {{yeoman.currentUser.user.name}}</h1>
+							<!-- <p>more text.</p> -->
 							<!-- <a  class="btn" title="Upgrade now">Upgrade now</a> -->
 							<img src="assets/assetspuebla/images/img-people.svg" alt="Upgrade now">
 							<a  class="close" data-close="upgrade-box"><i class="las la-times"></i></a>
@@ -30,6 +30,7 @@
 							<div class="row">
 								<div class="col-lg-3 col-6" (click)="setView('package')" style="cursor: pointer;">
 									<div class="item blue">
+                                        <div class="item blue"></div>
 										<h3>Packages </h3>
 										<span class="number">{{packs.length}}</span>
 										<span class="line"></span>
@@ -37,6 +38,7 @@
 								</div>
 								<div class="col-lg-3 col-6" (click)="setView('booking')" style="cursor: pointer;">
 									<div class="item green">
+                                        <div class="item green"></div>
 										<h3>Bookings    </h3>
 										<span class="number">{{bookings.length}}</span>
 										<span class="line"></span>
@@ -129,7 +131,7 @@
                                 </table>
 							</div>
 						</div>
-                        <div class="owner-box" *ngIf="viewFlag==0"> 
+                        <div class="owner-box" *ngIf="viewFlag!=1 && viewFlag!=2 && yeoman.currentUser.user.email!=='admin@email.com'"> 
 							<div class="row">
                                 <table class="member-place-list owner-booking table-responsive">
                                     <thead>
@@ -142,16 +144,13 @@
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <tr *ngFor="let booking of yeoman.bookingsByUser; let index=index">
+                                        <tr *ngFor="let booking of bookings; let index=index" [hidden]="booking.email!==yeoman.currentUser.user.email">
                                             <td data-title="ID">{{booking.name}}</td>
                                             <td data-title="Places"><b>{{booking.email}}</b></td>
                                             <td data-title="Booking at">{{booking.pack}}</td>
                                             <td data-title="Booking at">{{booking.phone}}</td>
                                             <td data-title="Status" class="approved"> proccess</td>
-                                            <td data-title="" class="place-action">
-                                                <a  class="cancel" title="Delete">Delete</a>
-                                                <!-- <a href="owner-bookings.html#" class="detail" title="Detail">Detail</a> -->
-                                            </td>
+                                           
                                         </tr>
                                      
                                     </tbody>
