@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Yeoman } from '@app/services/yeoman.service';
-
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-footer',
   templateUrl: './footer.component.html',
@@ -8,7 +8,7 @@ import { Yeoman } from '@app/services/yeoman.service';
 })
 export class FooterComponent implements OnInit {
 
-  constructor(
+  constructor( public router:Router,
     public yeoman:Yeoman
   ) { }
   setRoute(par:any){

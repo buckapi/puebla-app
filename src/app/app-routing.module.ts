@@ -7,7 +7,8 @@ const routes: Routes = [
   { path: 'guided', loadChildren: () => import('./components/guided/guided.module').then(m => m.GuidedModule) },
   { path: 'travel', loadChildren: () => import('./components/travel/travel.module').then(m => m.TravelModule) },
   { path: 'packs', loadChildren: () => import('./components/packs/packs.module').then(m => m.PacksModule) },
-  { path: 'traslation', loadChildren: () => import('./components/traslation/traslation/traslation.module').then(m => m.TraslationModule) }
+  { path: 'traslation', loadChildren: () => import('./components/traslation/traslation/traslation.module').then(m => m.TraslationModule) },
+  { path: 'my', loadChildren: () => import('./components/my/my.module').then(m => m.MyModule) }
 ];
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

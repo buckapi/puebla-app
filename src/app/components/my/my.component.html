@@ -1,0 +1,164 @@
+
+		<main id="main" class="site-main">
+			<div class="site-content owner-content">
+				<div class="member-menu">
+					<div class="container">
+						<ul>
+							<li class="active"><a href="owner-dashboard.html">Dashboard</a></li>
+							<li><a href="owner-bookings.html">Bookings</a></li>
+							<li><a href="owner-listings.html">Listings</a></li>
+							<li><a href="owner-wishlist.html">Wishlist</a></li>
+							<li><a href="owner-profile.html">Profile</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="container">
+					<div class="member-wrap">
+						<div class="member-wrap-top">
+							<h2 *ngIf="yeoman.currentUser?.user.name ">Welcome back {{ yeoman.currentUser?.user.name }}</h2>
+							<h2 *ngIf="currentUser?.user?.email &&  (currentUser?.user.email=='admin@email.com')">Welcome back! {{ currentUser?.user.email }}</h2>
+							<!-- <p>You are current FREE plan. <a >Upgrade now</a></p> -->
+						</div><!-- .member-wrap-top -->
+						<div class="upgrade-box" *ngIf="yeoman.currentUser?.user.name ">
+							<h1 *ngIf="yeoman.currentUser">Text for {{yeoman.currentUser.user.name}}</h1>
+							<p>more text.</p>
+							<!-- <a  class="btn" title="Upgrade now">Upgrade now</a> -->
+							<img src="assets/assetspuebla/images/img-people.svg" alt="Upgrade now">
+							<a  class="close" data-close="upgrade-box"><i class="las la-times"></i></a>
+						</div><!-- .upgrade-box -->
+						<div class="member-statistical" *ngIf="yeoman.currentUser.user.email==='admin@email.com'">
+							<div class="row">
+								<div class="col-lg-3 col-6" (click)="setView('package')" style="cursor: pointer;">
+									<div class="item blue">
+										<h3>Packages </h3>
+										<span class="number">{{packs.length}}</span>
+										<span class="line"></span>
+									</div>
+								</div>
+								<div class="col-lg-3 col-6" (click)="setView('booking')" style="cursor: pointer;">
+									<div class="item green">
+										<h3>Bookings    </h3>
+										<span class="number">{{bookings.length}}</span>
+										<span class="line"></span>
+									</div>
+								</div>
+								<!-- <div class="col-lg-3 col-6">
+									<div class="item purple">
+										<h3>Users</h3>
+										<span class="number">{{users.length}}</span>
+										<span class="line"></span>
+									</div>
+								</div> -->
+							</div>
+						</div>
+                        <div class="mw-box" *ngIf="viewFlag==1"> 
+							<h2>Packages</h2>
+							<div class="row">
+							<div class="col-lg-3 col-md-6" *ngFor="let pack of packs;let index =index">
+								<div class="place-item layout-02 place-hover">
+							    <div class="place-inner">
+					                <div class="place-thumb">
+					            		<a class="entry-thumb"><img src="{{pack.images[0]}}" alt=""></a>
+										<a  class="golo-add-to-wishlist btn-add-to-wishlist " data-place-id="185">
+											<span class="icon-heart">
+												<i class="la la-bookmark large"></i>
+											</span>                                    
+										</a>       
+						                <!-- <a class="entry-category purple" >
+						                    <i class="las la-spa"></i><span>Massage</span>
+						                </a> -->
+						                <!-- <a  class="author" title="Author"><img src="images/avatars/male-4.jpg" alt="Author"></a> -->
+									</div>       
+							        <div class="entry-detail">
+							            <!-- <div class="entry-head">
+							                <div class="place-type list-item">
+							                    <span>Massage</span>
+							               	</div>
+							                <div class="place-city">
+							                    <a >Lyon</a>
+							                </div>
+							            </div> -->
+							            <h3 class="place-title"><a >{{pack.name}}</a></h3>
+							            <div class="entry-bottom">
+							                <!-- <div class="place-preview">
+							                    <div class="place-rating">
+							                        <span>5.0</span>
+							                        <i class="la la-star"></i>
+							                    </div>
+							                    <span class="count-reviews">(2 Reviews)</span>
+							                </div> -->
+											<!-- <div class="place-price">
+							                    <span>$$</span>
+							                </div> -->
+							            </div>
+							        </div>
+							    </div>
+							</div>
+							</div>
+						
+						</div>
+						</div>
+                        
+                        <!-- .member-statistical -->
+						<div class="owner-box" *ngIf="viewFlag==2"> 
+							<div class="row">
+                                <table class="member-place-list owner-booking table-responsive">
+                                    <thead>
+                                        <tr>
+                                            <th>Name</th>
+                                            <th>email</th>
+                                            <th>pack</th><th>phone</th>
+                                            <th>Status</th>
+                                            <!-- <th>Action</th> -->
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr *ngFor="let booking of bookings; let index=index">
+                                            <td data-title="ID">{{booking.name}}</td>
+                                            <td data-title="Places"><b>{{booking.email}}</b></td>
+                                            <td data-title="Booking at">{{booking.pack}}</td>
+                                            <td data-title="Booking at">{{booking.phone}}</td>
+                                            <td data-title="Status" class="approved"> proccess</td>
+                                            <td data-title="" class="place-action">
+                                                <a  class="cancel" title="Delete">Delete</a>
+                                                <!-- <a href="owner-bookings.html#" class="detail" title="Detail">Detail</a> -->
+                                            </td>
+                                        </tr>
+                                     
+                                    </tbody>
+                                </table>
+							</div>
+						</div>
+                        <div class="owner-box" *ngIf="viewFlag==0"> 
+							<div class="row">
+                                <table class="member-place-list owner-booking table-responsive">
+                                    <thead>
+                                        <tr>
+                                            <th>Name</th>
+                                            <th>email</th>
+                                            <th>pack</th><th>phone</th>
+                                            <th>Status</th>
+                                            <!-- <th>Action</th> -->
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr *ngFor="let booking of yeoman.bookingsByUser; let index=index">
+                                            <td data-title="ID">{{booking.name}}</td>
+                                            <td data-title="Places"><b>{{booking.email}}</b></td>
+                                            <td data-title="Booking at">{{booking.pack}}</td>
+                                            <td data-title="Booking at">{{booking.phone}}</td>
+                                            <td data-title="Status" class="approved"> proccess</td>
+                                            <td data-title="" class="place-action">
+                                                <a  class="cancel" title="Delete">Delete</a>
+                                                <!-- <a href="owner-bookings.html#" class="detail" title="Detail">Detail</a> -->
+                                            </td>
+                                        </tr>
+                                     
+                                    </tbody>
+                                </table>
+							</div>
+						</div><!-- .owner-box -->
+					</div><!-- .member-wrap -->
+				</div>
+			</div><!-- .site-content -->
+		</main><!-- .site-main -->

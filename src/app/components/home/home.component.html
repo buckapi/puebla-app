@@ -1,6 +1,194 @@
 <!-- <app-guided [hidden]="yeoman.virtualRoute!='guided'"></app-guided> -->
 <div id="wrapper">
     <!-- .site-header -->
+    <header id="header" class="site-header">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xl-6 col-5">
+                <div class="site">
+                    <div class="site__menu">
+                        <a title="Menu Icon"  class="site__menu__icon">
+                            <i class="las la-bars la-24-black"></i>
+                        </a>
+                        <div class="popup-background"></div>
+                        <div class="popup popup--left">
+                            <a title="Close"  class="popup__close">
+                                <i class="las la-times la-24-black"></i>
+                            </a><!-- .popup__close -->
+                            <div class="popup__content">
+                                <div class="popup__user popup__box open-form">
+                                    <a title="Login"  class="open-login">Login</a>
+                                </div><!-- .popup__user -->
+                                
+                                <div class="popup__menu popup__box">
+                                    <ul class="menu-arrow">
+                                      <li routerLink="/">Home</li>
+                                      <li routerLink="/guided">Guided tour</li>
+                                      <li routerLink="/translation">Translator</li>
+                                      <li routerLink="/travel">Transport</li>  
+                                    </ul>
+                                  </div>
+                            </div>
+                        
+                        </div><!-- .popup -->
+                    </div><!-- .site__menu -->
+                    <div class="site__brand">
+                        <a title="Logo" class="site__brand__logo"><img src="assets/assetspuebla/images/assets/logo.png" alt="Golo"></a>
+                    </div><!-- .site__brand -->
+                    
+                </div><!-- .site -->
+            </div><!-- .col-md-6 -->
+            <div class="col-xl-6 col-7">
+                <div class="right-header align-right">
+                    <!-- <div class="right-header__login">
+                        <a title="guidedtravel" style="cursor: pointer;" routerLink="/">My</a>
+                    </div> -->
+                    <div class="right-header__login">
+                        <a title="guidedtravel" style="cursor: pointer;" routerLink="/">Home</a>
+                    </div><!-- .right-header__login -->
+                    <div class="right-header__login">
+                        <a title="Login" class="open-login" style="cursor: pointer;" >Login</a>
+                    </div>
+                    <div class="right-header__button btn" >
+                      <a title="Add place" routerLink="/my">
+                          <!-- <i class="las la-cart-arrow-down "></i> -->
+                          <span>My GuidedTravel</span>
+                      </a>
+                  </div>
+                  <div class="right-header__button btn">
+                    <a title="whatsapp" href="https://wa.me/+5212216482271?text=Hola!!%20Quiero%20solicitar%20un%20servicio"  target="_blank" title="Support" style="color: white;"> 
+                        
+                        <i class="la la-whatsapp"></i>
+                    </a>
+                  </div>
+                  
+                    <div class="popup popup-form">
+                        <a title="Close"  class="popup__close">
+                            <i class="las la-times la-24-black"></i>
+                        </a><!-- .popup__close -->
+                        <ul class="choose-form">
+                            <!-- <li class="nav-signup"><a title="Sign Up" href="index.html#signup">Sign Up</a></li> -->
+                            <li class="nav-login"><a title="Iniciar" href="index.html#login">Inicio de sessión</a></li>
+                        </ul>
+                        <!-- <p class="choose-more">Continue with <a title="Facebook" class="fb" >Facebook</a> or <a title="Google" class="gg" >Google</a></p> --> 
+                         <!-- <p class="choose-or"><span>Or</span></p> -->
+                        <div class="popup-content">
+                            <form class="form-sign form-content" id="signup" (ngSubmit)="registerUser()" #signupForm="ngForm">
+                                <div class="field-inline">
+                                  <div class="field-input">
+                                    <input type="text" placeholder="First Name" [(ngModel)]="firstName" name="first_name" required>
+                                  </div>
+                                  <div class="field-input">
+                                    <input type="text" placeholder="Last Name" [(ngModel)]="lastName" name="last_name" required>
+                                  </div>
+                                </div>
+                                <div class="field-input">
+                                  <input type="email" placeholder="Email" [(ngModel)]="email" name="email" required>
+                                </div>
+                                <div class="field-input">
+                                  <input type="password" placeholder="Password" [(ngModel)]="password" name="password" required>
+                                </div>
+                                <div class="field-check">
+                                  <label for="accept">
+                                    <input type="checkbox" id="accept" [(ngModel)]="acceptTerms" name="accept" required>
+                                    Accept the <a title="Terms">Terms</a> and <a title="Privacy Policy">Privacy Policy</a>
+                                    <span class="checkmark">
+                                      <i class="la la-check"></i>
+                                    </span>
+                                  </label>
+                                </div>
+                                <button type="submit" name="submit" [disabled]="!signupForm.valid">Sign Up</button>
+                              </form>
+                              
+                              <form class="form-log form-content" id="login" (ngSubmit)="loginUser()" #loginForm="ngForm">
+                                <div class="field-input">
+                                  <input type="text" placeholder="Email" [(ngModel)]="email" name="user" required>
+                                </div>
+                                <div class="field-input">
+                                  <input type="password" placeholder="Contraseña" [(ngModel)]="password" name="password" required>
+                                </div>
+                                <!-- Puedes agregar un mensaje para mostrar errores de inicio de sesión si lo deseas -->
+                                <div *ngIf="loginError" class="error-message">
+                                  {{ loginError }}
+                                </div>
+                                <input type="submit" name="submit" [disabled]="!loginForm.valid" value="Entrar">
+                              </form>
+                        </div>
+                    </div><!-- .popup-form -->
+                    <div class="right-header__search">
+                        <a title="whatsapp" href="https://wa.me/+5212216482271?text=Hola!!%20Quiero%20solicitar%20un%20servicio"  target="_blank" title="Support" style="color: white;"> 
+                            >
+                            <i class="la la-whatsapp"></i>
+                        </a>
+                        <div class="popup popup-form">
+                            <a title="Close" href="index.html#" class="popup__close">
+                                <i class="las la-times la-24-black"></i>
+                            </a><!-- .popup__close -->
+                            <ul class="choose-form">
+                                <li class="nav-signup"><a title="Sign Up" href="index.html#signup">Sign Up</a></li>
+                                <li class="nav-login"><a title="Log In" href="index.html#login">Log In</a></li>
+                            </ul>
+                            <p class="choose-more">Continue with <a title="Facebook" class="fb" href="index.html#">Facebook</a> or <a title="Google" class="gg" href="index.html#">Google</a></p>
+                            <p class="choose-or"><span>Or</span></p>
+                            <div class="popup-content">
+                                <form action="index.html#" class="form-sign form-content" id="signup">
+                                    <div class="field-inline">
+                                        <div class="field-input">
+                                            <input type="text" placeholder="First Name" value="" name="first_name">
+                                        </div>
+                                        <div class="field-input">
+                                            <input type="text" placeholder="Last Name" value="" name="last_name">
+                                        </div>
+                                    </div>
+                                    <div class="field-input">
+                                        <input type="email" placeholder="Email" value="" name="email">
+                                    </div>
+                                    <div class="field-input">
+                                        <input type="password" placeholder="Password" value="" name="password">
+                                    </div>
+                                    <div class="field-check">
+                                        <label for="accept">
+                                            <input type="checkbox" id="accept" value="">
+                                            Accept the <a title="Terms" href="index.html#">Terms</a> and <a title="Privacy Policy" href="index.html#">Privacy Policy</a>
+                                            <span class="checkmark">
+                                                <i class="la la-check"></i>
+                                            </span>
+                                        </label>
+                                    </div>
+                                    <input type="submit" name="submit" value="Sign Up">
+                                </form>
+                                <form action="index.html#" class="form-log form-content" id="login">
+                                    <div class="field-input">
+                                        <input type="text" placeholder="Username or Email" value="" name="user">
+                                    </div>
+                                    <div class="field-input">
+                                        <input type="password" placeholder="Password" value="" name="password">
+                                    </div>
+                                    <a title="Forgot password" class="forgot_pass" href="index.html#">Forgot password</a>
+                                    <input type="submit" name="submit" value="Login">
+                                </form>
+                            </div>
+                        </div>
+                        <!-- <div class="site__search">
+                            <a title="Close"  class="search__close">
+                                <i class="la la-times"></i>
+                            </a>
+                            <form action="index.html#" class="site__search__form" method="GET">
+                                <div class="site__search__field">
+                                    <span class="site__search__icon">
+                                        <i class="las la-search la-24-black"></i>
+                                    </span>
+                                    <input class="site__search__input" type="text" name="s" placeholder="Search places, cities">
+                                </div>
+                            </form>
+                        </div>  -->
+                    </div>
+                   </div>
+            </div><!-- .col-md-6 -->
+        </div><!-- .row -->
+    </div><!-- .container-fluid -->
+</header>
+
   
     <main id="main" class="site-main overflow">
         <div class="site-banner" style="background-image: url(assets/assetspuebla/images/bg/top-banner.png);">
