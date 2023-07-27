@@ -44,18 +44,22 @@
                         <a title="guidedtravel" style="cursor: pointer;" routerLink="/">My</a>
                     </div> -->
                     <div class="right-header__login">
-                        <a title="guidedtravel" style="cursor: pointer;" routerLink="/">Home</a>
+                        <a title="guidedtravel" style="cursor: pointer;" routerLink="/" [hidden]="router.url.includes('site')">Home</a>
                     </div><!-- .right-header__login -->
                     <div class="right-header__login">
-                        <a title="Login" class="open-login" style="cursor: pointer;" >Login</a>
+                        <a title="Login" class="open-login" style="cursor: pointer;" [hidden]="yeoman.isLogged">Login</a>
                     </div>
-                    <div class="right-header__button btn" >
-                      <a title="Add place" routerLink="/my">
+                    <div class="right-header__login">
+                        <a title="Login"  style="cursor: pointer;" [hidden]="!yeoman.isLogged" (click)="logOut()">Logout</a>
+                    </div>
+                    <div class="right-header__button btn"  [hidden]="!yeoman.isLogged">
+                      <a title="Add place"  routerLink="/my">
                           <!-- <i class="las la-cart-arrow-down "></i> -->
-                          <span>My GuidedTravel</span>
+                          <span [hidden]="yeoman.userType=='admin'">My GuidedTravel</span>
+                          <span [hidden]="yeoman.userType!=='admin'">Booking System</span>
                       </a>
                   </div>
-                  <div class="right-header__button btn">
+                  <div class="right-header__button btn" [hidden]="yeoman.userType=='admin'">
                     <a title="whatsapp" href="https://wa.me/+5212216482271?text=Hola!!%20Quiero%20solicitar%20un%20servicio"  target="_blank" title="Support" style="color: white;"> 
                         
                         <i class="la la-whatsapp"></i>

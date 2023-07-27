@@ -15,5 +15,8 @@ export class Yeoman {
   categories:any={};
   currentUser:any;
   userType:any;
+  isLogged:any=null;
+  email:any="";
+  bookings:any={};
   constructor() { }
 }

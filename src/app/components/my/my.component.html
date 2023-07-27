@@ -26,7 +26,7 @@
 							<img src="assets/assetspuebla/images/img-people.svg" alt="Upgrade now">
 							<a  class="close" data-close="upgrade-box"><i class="las la-times"></i></a>
 						</div><!-- .upgrade-box -->
-						<div class="member-statistical" *ngIf="yeoman.currentUser.user!=='undefined' && yeoman.currentUser.user?.email==='admin@email.com'">
+						<div class="member-statistical" *ngIf="yeoman.isLogged && yeoman.userType=='admin'">
 							<div class="row">
 								<div class="col-lg-3 col-6" (click)="setView('package')" style="cursor: pointer;">
 									<div class="item blue">
@@ -149,9 +149,8 @@
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <tr *ngFor="let booking of bookings; let index=index" [hidden]="booking.email!==yeoman.currentUser.user?.email">
+                                        <tr *ngFor="let booking of yeoman.bookings; " [hidden]="booking.email!==yeoman.currentUser?.user?.email">
                                             <td data-title="ID">{{booking.name}}</td>
-                                            <td data-title="Places"><b>{{booking.email}}</b></td>
 											<td data-title="Booking at">{{booking.pack}}</td>
                                             <td data-title="Booking at">{{booking.type}}</td>
                                             <td data-title="Booking at">{{booking.phone}}</td>

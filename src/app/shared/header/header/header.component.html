@@ -37,10 +37,14 @@
             </div><!-- .col-md-6 -->
             <div class="col-xl-6 col-7">
                 <div class="right-header align-right">
-                   
+                    
                     <div class="right-header__login">
                         <a title="guidedtravel" style="cursor: pointer;" routerLink="/">Home</a>
-                    </div><!-- .right-header__login -->
+                    </div>
+                    <div class="right-header__login">
+                        <a title="Login"  style="cursor: pointer;" [hidden]="!yeoman.isLogged" (click)="logOut()">Logout</a>
+                    </div> 
+                    <!-- .right-header__login -->
                     <!-- <div class="right-header__login">
                         <a title="Login" class="open-login" style="cursor: pointer;" >Login</a>
                     </div> -->
@@ -50,8 +54,8 @@
                           <span>Cars</span>
                       </a>
                   </div> -->
-                  <div class="right-header__button btn">
-                    <a title="whatsapp" href="https://wa.me/+5212216482271?text=Hola!!%20Quiero%20solicitar%20un%20servicio"  target="_blank" title="Support" style="color: white;"> 
+                  <div class="right-header__button btn" [hidden]="yeoman.userType=='admin'" >
+                    <a title="whatsapp" href="https://wa.me/+5212216482271?text=Hola!!%20Quiero%20solicitar%20un%20servicio"  target="_blank" title="Support" style="color: white;" > 
                         
                         <i class="la la-whatsapp"></i>
                     </a>

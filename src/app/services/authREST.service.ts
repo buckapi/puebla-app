@@ -102,22 +102,28 @@ export class AuthRESTService {
     let user_string = localStorage.getItem("currentUser");
     if (user_string) {
       let user: UserInterface = JSON.parse(user_string);
-      this.yeoman.currentUser=user;
-      
+      // this.yeoman.currentUser=user;
+      // this.yeoman.email=user.email;
+      console.log("maili: "+this.yeoman.email)
+        
       if(user.email==='undefined'){
         // this.yeoman.userType='admin';
         console.log("userType: "+this.yeoman.userType)
+        this.yeoman.isLogged=true;
           //  this.getAllUsers();
         }
       
         if(user.email!=='undefined'){
+          // this.yeoman.userType='admin';
           // this.yeoman.userType='customer';    
           // this.currentUser = this.authRESTService.getBookingsByUserEmail(this.yeoman.currentUser.email);
        
         }
+        this.yeoman.isLogged=true;
       return user;
     } else {
       return null;
+      this.yeoman.isLogged=false;
     }
   }
 
@@ -129,6 +135,8 @@ export class AuthRESTService {
     localStorage.removeItem('userd');
     localStorage.removeItem('nOrder');
     localStorage.removeItem('isLoggedin');
+    this.yeoman.isLogged=false;
+    this.yeoman.userType="";
     return this.http.post<UserInterface>(url, { headers: this.headers });
   }
 }

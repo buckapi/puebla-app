@@ -60,7 +60,8 @@ export class PacksComponent implements OnInit, AfterViewInit {
         this.sending = false;
         this.authRESTService.setUser(userData);
         // this.authRESTService.setToken(userData.id);
-        this.yeoman.currentUser=userData;
+        // this.yeoman.currentUser.email=this.email;
+        
         // this.authRESTService.setToken(token);
         // Llama al método createBooking del servicio para crear el nuevo documento en /booking
         if(this.yeoman.type=='pack'){this.yeoman.preview.type="pack";}
@@ -70,7 +71,13 @@ export class PacksComponent implements OnInit, AfterViewInit {
             // Aquí puedes manejar la respuesta de la API después de crear el nuevo documento en /booking
             console.log('Nuevo documento creado en /booking:', bookingData);
             this.yeoman.userType='customer';
-            this.router.navigate(['my'])
+            this.yeoman.email=bookingData.email;
+            this.authRESTService.getAllBookings().subscribe((data=>{
+              this.yeoman.bookings=data;
+              console.log("datica:  "+this.yeoman.bookings);
+              this.router.navigate(['my'])
+            }));
+            
           },
           (error) => {
             // Manejo de errores si la API devuelve algún error durante la creación del documento en /booking

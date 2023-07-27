@@ -105,7 +105,8 @@ name:string='';
         // Aquí puedes manejar la respuesta de la API después de iniciar sesión exitosamente
         this.loginError = '';
         console.log('Inicio de sesión exitoso:', userData);
-  
+  this.yeoman.email=this.email;
+  console.log("maililili" +this.yeoman.email);
         if (this.email==='admin@email.com'){this.yeoman.userType='admin'}
         if (this.email!=='admin@email.com'){this.yeoman.userType='customer'}
         // Guardar los datos del usuario en el localStorage
@@ -134,7 +135,9 @@ name:string='';
       (userData) => {
         // Aquí puedes manejar la respuesta de la API después del inicio de sesión exitoso
         console.log('Usuario logueado:', userData);
-        
+        this.yeoman.isLogged=true;
+        this.yeoman.email=email;
+        this.yeoman.currentUser=userData;
       },
       (error) => {
         // Manejo de errores si la API devuelve algún error en el inicio de sesión
@@ -149,7 +152,7 @@ name:string='';
         (userData) => {
           // Aquí puedes manejar la respuesta de la API después de registrar el usuario exitosamente
           console.log('Usuario registrado:', userData);
-          
+          this.yeoman.email=this.email;
         },
         (error) => {
           // Manejo de errores si la API devuelve algún error durante el registro
@@ -161,7 +164,9 @@ name:string='';
       console.log('Debes aceptar los términos y condiciones.');
     }
   }
-  
+  logOut(){
+    this.authRESTService.logoutUser();
+  }
   ngAfterViewInit(): void {
   }
 
