@@ -14,5 +14,6 @@ export class Yeoman {
   phone:any;
   categories:any={};
   currentUser:any;
+  userType:any;
   constructor() { }
 }

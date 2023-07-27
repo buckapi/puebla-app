@@ -59,6 +59,8 @@ export class PacksComponent implements OnInit, AfterViewInit {
         // alert(message);
         this.sending = false;
         this.authRESTService.setUser(userData);
+        // this.authRESTService.setToken(userData.id);
+        this.yeoman.currentUser=userData;
         // this.authRESTService.setToken(token);
         // Llama al método createBooking del servicio para crear el nuevo documento en /booking
         if(this.yeoman.type=='pack'){this.yeoman.preview.type="pack";}

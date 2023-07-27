@@ -15,18 +15,18 @@
 				<div class="container">
 					<div class="member-wrap">
 						<div class="member-wrap-top">
-							<h2 *ngIf="yeoman.currentUser?.user.name   ">Welcome back {{ yeoman.currentUser?.user.name }}</h2>
-							<h2 *ngIf="currentUser?.user?.email &&  (currentUser?.user.email=='admin@email.com')">Welcome back! {{ currentUser?.user.email }}</h2>
+							<h2   >Welcome back</h2>
+							<!-- <h2 *ngIf="currentUser?.user?.email &&  (currentUser?.user.email=='admin@email.com')">Welcome back! {{ currentUser?.user.email }}</h2> -->
 							<!-- <p>You are current FREE plan. <a >Upgrade now</a></p> -->
 						</div><!-- .member-wrap-top -->
-						<div class="upgrade-box" *ngIf="yeoman.currentUser?.user.name ">
-							<h1 *ngIf="yeoman.currentUser">Booking for {{yeoman.currentUser.user.name}}</h1>
+						<div class="upgrade-box" >
+							<h1 >Booking for </h1>
 							<!-- <p>more text.</p>   -->
 							<!-- <a  class="btn" title="Upgrade now">Upgrade now</a> -->
 							<img src="assets/assetspuebla/images/img-people.svg" alt="Upgrade now">
 							<a  class="close" data-close="upgrade-box"><i class="las la-times"></i></a>
 						</div><!-- .upgrade-box -->
-						<div class="member-statistical" *ngIf="yeoman.currentUser.user.email==='admin@email.com'">
+						<div class="member-statistical" *ngIf="yeoman.currentUser.user!=='undefined' && yeoman.currentUser.user?.email==='admin@email.com'">
 							<div class="row">
 								<div class="col-lg-3 col-6" (click)="setView('package')" style="cursor: pointer;">
 									<div class="item blue">
@@ -105,7 +105,7 @@
 						<div class="owner-box" *ngIf="viewFlag==2"> 
 							<div class="row">
                                 <table class="member-place-list owner-booking table-responsive">
-                                    <thead>
+                                    <thead >
                                         <tr>
                                             <th>Name</th>
                                             <th>email</th>
@@ -121,7 +121,7 @@
                                             <td data-title="ID">{{booking.name}}</td>
                                             <td data-title="Places"><b>{{booking.email}}</b></td>
                                             <td data-title="Booking at">{{booking.pack}}</td>
-											<td data-title="Booking at">{{booking.type}}</td>
+											<td data-title="Booking at">{{booking.pack}}</td>
                                             <td data-title="Booking at">{{booking.phone}}</td>
                                             <td data-title="Status" class="approved"> proccess</td>
                                             <td data-title="" class="place-action">
@@ -134,11 +134,11 @@
                                 </table>
 							</div>
 						</div>
-                        <div class="owner-box" *ngIf="viewFlag!=1 && viewFlag!=2 && yeoman.currentUser.user.email!=='admin@email.com'"> 
+                        <div class="owner-box" *ngIf="viewFlag==0 || yeoman.currentUser.user.email!=='admin@email.com'"> 
 							<div class="row">
                                 <table class="member-place-list owner-booking table-responsive">
-                                    <thead>
-                                        <tr>
+                                    <thead [hidden]="bookings.length<=0">
+                                        <tr [hidden]="bookings.length<=0">
                                             <th>Name</th>
                                             <th>email</th>
                                             <th>description</th>
@@ -149,7 +149,7 @@
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <tr *ngFor="let booking of bookings; let index=index" [hidden]="booking.email!==yeoman.currentUser.user.email">
+                                        <tr *ngFor="let booking of bookings; let index=index" [hidden]="booking.email!==yeoman.currentUser.user?.email">
                                             <td data-title="ID">{{booking.name}}</td>
                                             <td data-title="Places"><b>{{booking.email}}</b></td>
 											<td data-title="Booking at">{{booking.pack}}</td>

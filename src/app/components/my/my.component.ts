@@ -65,13 +65,15 @@ export class MyComponent implements OnInit, AfterViewInit {
   }
 ngAfterViewInit(): void {
   this.getAllBookings();
+  this.authRESTService.getCurrentUser() ;
   if(this.yeoman.currentUser.email==='admin@email.com'){
   
      this.getAllUsers();
   }
 
   if(this.yeoman.currentUser.email!=='admin@email.com'){
-    this.currentUser = this.authRESTService.getBookingsByUserEmail(this.yeoman.currentUser.email);
+    
+    // this.currentUser = this.authRESTService.getBookingsByUserEmail(this.yeoman.currentUser.email);
  
   }
 }

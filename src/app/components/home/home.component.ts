@@ -38,7 +38,7 @@ name:string='';
     public yeoman:Yeoman,
     public router:Router
   ) {
-//  this.agregarUsuario();
+  // this.agregarUsuario();
     this.checkIfMobile();
     window.addEventListener('resize', () => {
       this.checkIfMobile();
@@ -88,6 +88,8 @@ name:string='';
         (userData) => {
           // Aquí puedes manejar la respuesta de la API después de registrar el usuario exitosamente
           console.log('Usuario registrado:', userData);
+          if (nuevoUsuario.email==='admin@email.com'){this.yeoman.userType='´admin'}
+          if (nuevoUsuario.email!=='admin@email.com'){this.yeoman.userType='customer'}
         },
         (error) => {
           // Manejo de errores si la API devuelve algún error durante el registro
@@ -104,6 +106,8 @@ name:string='';
         this.loginError = '';
         console.log('Inicio de sesión exitoso:', userData);
   
+        if (this.email==='admin@email.com'){this.yeoman.userType='´admin'}
+        if (this.email!=='admin@email.com'){this.yeoman.userType='customer'}
         // Guardar los datos del usuario en el localStorage
         this.authRESTService.setUser(userData);
         const token = userData.id;
