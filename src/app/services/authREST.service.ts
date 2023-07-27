@@ -66,9 +66,9 @@ export class AuthRESTService {
       .pipe(map(data => data));
   }
 
-  createBooking(name: string, email: string, pack: string, phone: string): Observable<any> {
+  createBooking(name: string, email: string, pack: string,type: string, phone: string): Observable<any> {
     const url = `${this.apiBaseUrl}/branchs`;
-    const bookingData = { name, email, pack,phone}; // Datos para el nuevo documento en /booking
+    const bookingData = { name, email, pack,type,phone}; // Datos para el nuevo documento en /booking
     
     return this.http.post<any>(url, bookingData, { headers: this.headers })
       .pipe(map(data => data));

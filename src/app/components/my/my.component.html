@@ -15,13 +15,13 @@
 				<div class="container">
 					<div class="member-wrap">
 						<div class="member-wrap-top">
-							<h2 *ngIf="yeoman.currentUser?.user.name ">Welcome back {{ yeoman.currentUser?.user.name }}</h2>
+							<h2 *ngIf="yeoman.currentUser?.user.name   ">Welcome back {{ yeoman.currentUser?.user.name }}</h2>
 							<h2 *ngIf="currentUser?.user?.email &&  (currentUser?.user.email=='admin@email.com')">Welcome back! {{ currentUser?.user.email }}</h2>
 							<!-- <p>You are current FREE plan. <a >Upgrade now</a></p> -->
 						</div><!-- .member-wrap-top -->
 						<div class="upgrade-box" *ngIf="yeoman.currentUser?.user.name ">
 							<h1 *ngIf="yeoman.currentUser">Booking for {{yeoman.currentUser.user.name}}</h1>
-							<!-- <p>more text.</p> -->
+							<!-- <p>more text.</p>   -->
 							<!-- <a  class="btn" title="Upgrade now">Upgrade now</a> -->
 							<img src="assets/assetspuebla/images/img-people.svg" alt="Upgrade now">
 							<a  class="close" data-close="upgrade-box"><i class="las la-times"></i></a>
@@ -109,7 +109,9 @@
                                         <tr>
                                             <th>Name</th>
                                             <th>email</th>
-                                            <th>pack</th><th>phone</th>
+                                            <th>description</th>
+											<th>type</th>
+											<th>phone</th>
                                             <th>Status</th>
                                             <!-- <th>Action</th> -->
                                         </tr>
@@ -119,6 +121,7 @@
                                             <td data-title="ID">{{booking.name}}</td>
                                             <td data-title="Places"><b>{{booking.email}}</b></td>
                                             <td data-title="Booking at">{{booking.pack}}</td>
+											<td data-title="Booking at">{{booking.type}}</td>
                                             <td data-title="Booking at">{{booking.phone}}</td>
                                             <td data-title="Status" class="approved"> proccess</td>
                                             <td data-title="" class="place-action">
@@ -138,7 +141,9 @@
                                         <tr>
                                             <th>Name</th>
                                             <th>email</th>
-                                            <th>pack</th><th>phone</th>
+                                            <th>description</th>
+											<th>type</th>
+											<th>phone</th>
                                             <th>Status</th>
                                             <!-- <th>Action</th> -->
                                         </tr>
@@ -147,7 +152,8 @@
                                         <tr *ngFor="let booking of bookings; let index=index" [hidden]="booking.email!==yeoman.currentUser.user.email">
                                             <td data-title="ID">{{booking.name}}</td>
                                             <td data-title="Places"><b>{{booking.email}}</b></td>
-                                            <td data-title="Booking at">{{booking.pack}}</td>
+											<td data-title="Booking at">{{booking.pack}}</td>
+                                            <td data-title="Booking at">{{booking.type}}</td>
                                             <td data-title="Booking at">{{booking.phone}}</td>
                                             <td data-title="Status" class="approved"> proccess</td>
                                            

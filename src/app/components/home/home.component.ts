@@ -67,6 +67,12 @@ name:string='';
   }
   setPreview(index:any){
     this.yeoman.preview=this.packs[index];
+    this.yeoman.type="pack";
+    this.router.navigate(['/packs']);
+  }
+  setTransportationPreview(index:any){
+    this.yeoman.type="transportation";
+    this.yeoman.preview=this.travel[index];
     this.router.navigate(['/packs']);
   }
   agregarUsuario() {

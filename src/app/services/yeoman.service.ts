@@ -4,6 +4,7 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class Yeoman {
+  type:any="";
   isLoaded:Boolean=false;
   virtualRoute:string="first";
   categorySelected:string="first";
