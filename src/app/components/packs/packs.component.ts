@@ -43,8 +43,8 @@ export class PacksComponent implements OnInit, AfterViewInit {
     this.isMobile = window.innerWidth <= 767;
   }
   sendMessageToWhatsApp() {
-    const phoneNumber = '+574147529202';
-    const message = `Hola ,Mi nombre es ${this.name} (${this.email} )y deseo reservar por el paquete "${this.yeoman.preview.name}"`;
+    const phoneNumber = '+5212216482271';
+    const message = `Hello, my name is ${this.name} (${this.email} )and I want to book the package "${this.yeoman.preview.name}"`;
     const encodedMessage = encodeURIComponent(message);
 
     const url = `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${encodedMessage}`;
