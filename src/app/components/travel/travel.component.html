@@ -103,7 +103,7 @@
                 <p>Transportation</p>
             </div>
             <div class="area-places">
-                <div class="place-item layout-02 place-hover" data-maps_name="mattone_restaurant" *ngFor="let transport of travel.slice(0, 8); let index = index">
+                <div class="place-item layout-02 place-hover" data-maps_name="mattone_restaurant" *ngFor="let transport of travel.slice(0, 8); let index = index" (click)="setTransportationPreview(index)">
                     <div class="place-inner">
                         <div class="place-thumb hover-img">
                             <a class="entry-thumb" ><img [src]="transport.images[0]" alt=""></a>
@@ -130,7 +130,7 @@
                                         <i class="la la-star"></i>
                                     </div>
                                     <a class="btn-solicitar view1">
-                                        <span>Request</span>
+                                        <span>Request a book</span> 
                                     </a>
                                 </div>
                                 

@@ -112,7 +112,7 @@
                                             <th>description</th>
 											<th>type</th>
 											<th>phone</th>
-                                            <th>Status</th>
+                                            <!-- <th>Status</th> -->
                                             <!-- <th>Action</th> -->
                                         </tr>
                                     </thead>
@@ -123,11 +123,10 @@
                                             <td data-title="Booking at">{{booking.pack}}</td>
 											<td data-title="Booking at">{{booking.pack}}</td>
                                             <td data-title="Booking at">{{booking.phone}}</td>
-                                            <td data-title="Status" class="approved"> proccess</td>
+                                            <!-- <td data-title="Status" class="approved"> proccess</td>
                                             <td data-title="" class="place-action">
                                                 <a  class="cancel" title="Delete">Delete</a>
-                                                <!-- <a href="owner-bookings.html#" class="detail" title="Detail">Detail</a> -->
-                                            </td>
+                                            </td> -->
                                         </tr>
                                      
                                     </tbody>
@@ -144,17 +143,18 @@
                                             <th>description</th>
 											<th>type</th>
 											<th>phone</th>
-                                            <th>Status</th>
+                                            <!-- <th>Status</th> -->
                                             <!-- <th>Action</th> -->
                                         </tr>
                                     </thead>
                                     <tbody>
                                         <tr *ngFor="let booking of yeoman.bookings; " [hidden]="booking.email!==yeoman.currentUser?.user?.email">
                                             <td data-title="ID">{{booking.name}}</td>
+											<td data-title="Places"><b>{{booking.email}}</b></td>
 											<td data-title="Booking at">{{booking.pack}}</td>
                                             <td data-title="Booking at">{{booking.type}}</td>
                                             <td data-title="Booking at">{{booking.phone}}</td>
-                                            <td data-title="Status" class="approved"> proccess</td>
+                                            <!-- <td data-title="Status" class="approved"> proccess</td> -->
                                            
                                         </tr>
                                      
