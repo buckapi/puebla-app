@@ -8,12 +8,43 @@ import { Router } from '@angular/router';
 import { travel } from '@app/services/travel.service';
 import { UserInterface } from '@app/interfaces/user-interface';
 import { AuthRESTService } from '@app/services/authREST.service';
+import { SwiperOptions } from 'swiper';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements AfterViewInit {
+
+  config: SwiperOptions = {
+    a11y: { enabled: true },
+    direction: 'horizontal',
+    slidesPerView: 3,
+    keyboard: true,
+    mousewheel: false,
+    scrollbar: false,
+    pagination: false,
+    spaceBetween: 25,
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev'
+    },
+  };
+  config2: SwiperOptions = {
+    a11y: { enabled: true },
+    direction: 'horizontal',
+    slidesPerView: 4,
+    keyboard: true,
+    mousewheel: false,
+    scrollbar: false,
+    pagination: true,
+    spaceBetween: 2,
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev'
+    },
+  };
+
 name:string='';
   firstName: string = '';
   lastName: string = '';

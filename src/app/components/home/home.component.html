@@ -317,9 +317,9 @@
         <div class="cities">
           <div class="container">
               <h2 class="cities__title title offset-item">Popular sites packages </h2>
-              <div class="cities__content offset-item">
-                  <div class="row">
-                    <div class="col-lg-4 col-sm-12" *ngFor="let pack of packs.slice(0, 8); let index = index"> 
+              <div class=" ">
+                  <!-- <div class="row">
+                    <div class="col-lg-4 col-sm-12" *ngFor="let pack of packs; let index = index"> 
                         <div class="cities__item hover__box">
                           <div class="cities__thumb hover__box__thumb">
                             <a title="Puebla">
@@ -352,7 +352,54 @@
                           </div>
                         </div>
                     </div>
-                  </div>
+                  </div> -->
+
+                  <swiper [config]="config" > 
+                  
+                    <div class="swiper-wrapper" >
+                        <div class="swiper-slide " style="cursor: pointer;" *ngFor="let pack of packs; let index = index">
+                            <div class="" > 
+                                <div class="cities__item hover__box">
+                                  <div class="cities__thumb hover__box__thumb">
+                                    <a title="Puebla">
+                                      <img [src]="pack.images[0]" alt="Tokyo">
+                                    </a>
+                                    <div class="black-overlay"></div>
+                                  </div>
+                                  <h3 class="cities__name">{{ pack.name }}</h3>
+                                  <div class="cities__info">
+                                    <p class="cities__description hidden-description" style="max-height: 100px; overflow: hidden;"><strong style="font-weight: bold;">Preview: </strong>{{ pack.shortDescription }}</p>
+                                    <p class="cities__valid hidden-description" ><strong style="font-weight: bold;"> Duration: </strong>{{ pack.duration }}</p>
+                                    <p class="cities__view hidden-description" ><strong style="font-weight: bold;">Valid:</strong> {{ pack.valid }} persons </p>
+                                    <h4 class="cities__number hidden-description view" style=" cursor: pointer;" (click)="setPreview(index)">View more</h4>
+                                  </div>
+                                </div>
+                            </div>
+                                                
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="cities__item hover__box">
+                                <div class="cities__thumb hover__box__thumb">
+                                  <a title="Puebla">
+                                    <img src="assets/assetspuebla/images/city/tokyo.jpeg" alt="Tokyo">
+                                  </a>
+                                  <div class="black-overlay"></div>
+                                </div>
+                                <h3 class="cities__name">Individual Services</h3>
+                                <div class="cities__info">
+                                  <p class="cities__description hidden-description" style="max-height: 100px; overflow: hidden;"><strong style="font-weight: bold;">Preview: Transportation CDMX-PUEBLA-AIRPORT</strong></p>
+                                 
+                                  <h4 class="cities__number hidden-description view" style=" cursor: pointer;" >Request</h4>
+                                </div>
+                              </div>
+                        </div>
+                      
+                        
+                    </div>                    
+                    <div class="swiper-button-prev" style="color: #fd7e14;" ></div>
+                <div class="swiper-button-next" style="color: #fd7e14;"></div>
+                </swiper>
+
               </div><!-- .cities__content -->
           </div>
         </div><!-- .cities -->
@@ -391,7 +438,7 @@
                                                 <i class="la la-star"></i>
                                             </div>
                                             <a class="btn-solicitar view1" style=" cursor: pointer;" >
-                                                <span>Request</span>
+                                                <span>Request a book</span>
                                             </a>
                                         </div>
                                        
@@ -425,9 +472,11 @@
                 <h2>Popular dishes in Puebla</h2>
                 <p>These and more dishes are tasted in Puebla</p>
             </div>
-                <div class="restaurant-sliders slick-sliders offset-item">
-                  <div class="restaurant-slider slick-slider" data-item="4" data-itemScroll="4" data-arrows="true" data-dots="true" data-tabletItem="2" data-tabletScroll="2" data-mobileItem="1" data-mobileScroll="1">
-                      <div class="place-item layout-02 place-hover" data-maps_name="mattone_restaurant">
+               
+                    <swiper [config]="config" > 
+                        <div class="swiper-wrapper" >
+                            <div class="swiper-slide">
+                                <div class="place-item layout-02 place-hover" data-maps_name="mattone_restaurant">
                           <div class="place-inner">
                               <div class="place-thumb hover-img">
                                   <a class="entry-thumb" ><img src="assets/assetspuebla/images/listing/platillo1.jpg" alt=""></a>
@@ -458,214 +507,218 @@
                               </div>
                           </div>
                       </div>
-                      <div class="place-item layout-02 place-hover" data-maps_name="mattone_restaurant">
-                          <div class="place-inner">
-                              <div class="place-thumb hover-img">
-                                  <a class="entry-thumb" ><img src="assets/assetspuebla/images/listing/platillo2.jpg" alt=""></a>
-                                  <!-- <a class="golo-add-to-wishlist btn-add-to-wishlist " data-place-id="185">
-                                      <span class="icon-heart">
-                                          <i class="la la-bookmark large"></i>
-                                      </span>                                    
-                                  </a>        -->
-                                  <a class="entry-category rosy-pink">
-                                      <i class="las la-utensils"></i><span>Platillo</span>
-                                  </a>
-                              </div>       
-                              <div class="entry-detail">
-                                  
-                                  <h3 class="place-title"><a >Chiles en nogada</a></h3>
-                                  <div class="open-now"><i class="las la-door-open"></i>agosto-septiembre</div>
-                                  <div class="entry-bottom">
-                                      <div class="place-preview">
-                                          <div class="place-rating">
-                                              <span>5.0</span>
-                                              <i class="la la-star"></i>
-                                          </div>
-                                         
-                                      </div>
-                                    <!--  <div class="place-price">
-                                          <span>$$</span>
-                                      </div> -->
-                                  </div>
-                              </div>
-                          </div>
-                      </div>
-                      <div class="place-item layout-02 place-hover" data-maps_name="retro_fitness">
-                          <div class="place-inner">
-                              <div class="place-thumb hover-img">
-                                  <a class="entry-thumb" ><img src="assets/assetspuebla/images/listing/platillo3.jpg" alt=""></a>
-                                  <!-- <a class="golo-add-to-wishlist btn-add-to-wishlist " data-place-id="185">
-                                      <span class="icon-heart">
-                                          <i class="la la-bookmark large"></i>
-                                      </span>                                    
-                                  </a>        -->
-                                  <a class="entry-category rosy-pink">
-                                      <i class="las la-utensils"></i><span>Platillo</span>
-                                  </a>
-                              </div>       
-                              <div class="entry-detail">
-                                 
-                                  <h3 class="place-title"><a >Mole poblano</a></h3>
-                                  <!-- <div class="open-now"><i class="las la-door-open"></i>Open now</div> -->
-                                  <div class="entry-bottom">
-                                      <div class="place-preview">
-                                          <div class="place-rating">
-                                              <span>5.0</span>
-                                              <i class="la la-star"></i>
-                                          </div>
-                                      </div>
-                                    
-                                  </div>
-                              </div>
-                          </div>
-                      </div>
-                      <div class="place-item layout-02 place-hover" data-maps_name="body_spa">
-                          <div class="place-inner">
-                              <div class="place-thumb hover-img">
-                                  <a class="entry-thumb" ><img src="assets/assetspuebla/images/listing/platillo4.jpg" alt=""></a>
-                                  <!-- <a class="golo-add-to-wishlist btn-add-to-wishlist " data-place-id="185">
-                                      <span class="icon-heart">
-                                          <i class="la la-bookmark large"></i>
-                                      </span>                                    
-                                  </a>        -->
-                                  <a class="entry-category rosy-pink">
-                                      <i class="las la-utensils"></i><span>Platillo</span>
-                                  </a>
-                              </div>       
-                              <div class="entry-detail">
-                                 
-                                  <h3 class="place-title"><a >Chalupas</a></h3>
-                                  <div class="entry-bottom">
-                                      <div class="place-preview">
-                                          <div class="place-rating">
-                                              <span>5.0</span>
-                                              <i class="la la-star"></i>
-                                          </div>
-                                      </div>
-  
-                                  </div>
-                              </div>
-                          </div>
-                      </div>
-                      <div class="place-item layout-02 place-hover" data-maps_name="antoinette">
-                          <div class="place-inner">
-                              <div class="place-thumb hover-img">
-                                  <a class="entry-thumb" ><img src="assets/assetspuebla/images/listing/platillo5.jpg" alt=""></a>
-                                  <!-- <a class="golo-add-to-wishlist btn-add-to-wishlist " data-place-id="185">
-                                      <span class="icon-heart">
-                                          <i class="la la-bookmark large"></i>
-                                      </span>                                    
-                                  </a>        -->
-                                  <a class="entry-category rosy-pink">
-                                      <i class="las la-utensils"></i><span>Platillo</span>
-                                  </a>
-                              </div>       
-                              <div class="entry-detail">
+                            </div>
                                 
-                                  <h3 class="place-title"><a >Cemitas</a></h3>
-                                  <div class="entry-bottom">
-                                      <div class="place-preview">
-                                          <div class="place-rating">
-                                              <span>5.0</span>
-                                              <i class="la la-star"></i>
-                                          </div>
-                                      </div>
+                    <div class="swiper-slide">
+                        <div class="place-item layout-02 place-hover" data-maps_name="mattone_restaurant">
+                            <div class="place-inner">
+                                <div class="place-thumb hover-img">
+                                    <a class="entry-thumb" ><img src="assets/assetspuebla/images/listing/platillo2.jpg" alt=""></a>
+                                    <!-- <a class="golo-add-to-wishlist btn-add-to-wishlist " data-place-id="185">
+                                        <span class="icon-heart">
+                                            <i class="la la-bookmark large"></i>
+                                        </span>                                    
+                                    </a>        -->
+                                    <a class="entry-category rosy-pink">
+                                        <i class="las la-utensils"></i><span>Platillo</span>
+                                    </a>
+                                </div>       
+                                <div class="entry-detail">
+                                    
+                                    <h3 class="place-title"><a >Chiles en nogada</a></h3>
+                                    <div class="open-now"><i class="las la-door-open"></i>agosto-septiembre</div>
+                                    <div class="entry-bottom">
+                                        <div class="place-preview">
+                                            <div class="place-rating">
+                                                <span>5.0</span>
+                                                <i class="la la-star"></i>
+                                            </div>
+                                           
+                                        </div>
+                                      <!--  <div class="place-price">
+                                            <span>$$</span>
+                                        </div> -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div></div>
+                        <div class="swiper-slide">
+                        <div class="place-item layout-02 place-hover" data-maps_name="retro_fitness">
+                            <div class="place-inner">
+                                <div class="place-thumb hover-img">
+                                    <a class="entry-thumb" ><img src="assets/assetspuebla/images/listing/platillo3.jpg" alt=""></a>
+                                    <!-- <a class="golo-add-to-wishlist btn-add-to-wishlist " data-place-id="185">
+                                        <span class="icon-heart">
+                                            <i class="la la-bookmark large"></i>
+                                        </span>                                    
+                                    </a>        -->
+                                    <a class="entry-category rosy-pink">
+                                        <i class="las la-utensils"></i><span>Platillo</span>
+                                    </a>
+                                </div>       
+                                <div class="entry-detail">
+                                   
+                                    <h3 class="place-title"><a >Mole poblano</a></h3>
+                                    <!-- <div class="open-now"><i class="las la-door-open"></i>Open now</div> -->
+                                    <div class="entry-bottom">
+                                        <div class="place-preview">
+                                            <div class="place-rating">
+                                                <span>5.0</span>
+                                                <i class="la la-star"></i>
+                                            </div>
+                                        </div>
                                       
-                                  </div>
-                              </div>
-                          </div>
-                      </div>
-                      <div class="place-item layout-02 place-hover" data-maps_name="kathay_cinema">
-                          <div class="place-inner">
-                              <div class="place-thumb hover-img">
-                                  <a class="entry-thumb" ><img src="assets/assetspuebla/images/listing/platillo6.jpg" alt=""></a>
-                                  <!-- <a class="golo-add-to-wishlist btn-add-to-wishlist " data-place-id="185">
-                                      <span class="icon-heart">
-                                          <i class="la la-bookmark large"></i>
-                                      </span>                                    
-                                  </a>        -->
-                                   <a class="entry-category rosy-pink">
-                                      <i class="las la-utensils"></i><span>Restaurant</span>
-                                  </a>
-                              </div>       
-                              <div class="entry-detail">
-                                 
-                                  <h3 class="place-title"><a >Molotes</a></h3>
-                                  <div class="entry-bottom">
-                                      <div class="place-preview">
-                                          <div class="place-rating">
-                                              <span>5.0</span>
-                                              <i class="la la-star"></i>
-                                          </div>
-                                      </div>
-                                  </div>
-                              </div>
-                          </div>
-                      </div>
-                      <div class="place-item layout-02 place-hover" data-maps_name="kathay_cinema">
-                          <div class="place-inner">
-                              <div class="place-thumb hover-img">
-                                  <a class="entry-thumb" ><img src="assets/assetspuebla/images/listing/platillo7.jpg" alt=""></a>
-                                  <!-- <a class="golo-add-to-wishlist btn-add-to-wishlist " data-place-id="185">
-                                      <span class="icon-heart">
-                                          <i class="la la-bookmark large"></i>
-                                      </span>                                    
-                                  </a>        -->
-                                   <a class="entry-category rosy-pink">
-                                      <i class="las la-utensils"></i><span>Platillos</span>
-                                  </a>
-                              </div>       
-                              <div class="entry-detail">
-                                 
-                                  <h3 class="place-title"><a >Tostadas</a></h3>
-                                  <div class="entry-bottom">
-                                      <div class="place-preview">
-                                          <div class="place-rating">
-                                              <span>5.0</span>
-                                              <i class="la la-star"></i>
-                                          </div>
-                                      </div>
-                                  </div>
-                              </div>
-                          </div>
-                      </div>
-                      <div class="place-item layout-02 place-hover" data-maps_name="kathay_cinema">
-                          <div class="place-inner">
-                              <div class="place-thumb hover-img">
-                                  <a class="entry-thumb" ><img src="assets/assetspuebla/images/listing/platillo8.jpg" alt=""></a>
-                                  <!-- <a class="golo-add-to-wishlist btn-add-to-wishlist " data-place-id="185">
-                                      <span class="icon-heart">
-                                          <i class="la la-bookmark large"></i>
-                                      </span>                                    
-                                  </a>        -->
-                                   <a class="entry-category rosy-pink">
-                                      <i class="las la-utensils"></i><span>Platillos</span>
-                                  </a>
-                              </div>       
-                              <div class="entry-detail">
-                                 
-                                  <h3 class="place-title"><a >tortitas de Santa Clara</a></h3>
-                                  <div class="entry-bottom">
-                                      <div class="place-preview">
-                                          <div class="place-rating">
-                                              <span>5.0</span>
-                                              <i class="la la-star"></i>
-                                          </div>
-                                      </div>
-                                  </div>
-                              </div>
-                          </div>
-                      </div>
-                  </div><!-- .restaurant-slider -->
-                  <div class="place-slider__nav slick-nav">
-                      <div class="place-slider__prev slick-nav__prev">
-                          <i class="las la-angle-left"></i>
-                      </div><!-- .place-slider__prev -->
-                      <div class="place-slider__next slick-nav__next">		
-                          <i class="las la-angle-right"></i>
-                      </div><!-- .place-slider__next -->
-                  </div><!-- .place-slider__nav -->
-              </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div></div>
+                        <div class="swiper-slide">
+                        <div class="place-item layout-02 place-hover" data-maps_name="body_spa">
+                            <div class="place-inner">
+                                <div class="place-thumb hover-img">
+                                    <a class="entry-thumb" ><img src="assets/assetspuebla/images/listing/platillo4.jpg" alt=""></a>
+                                    <!-- <a class="golo-add-to-wishlist btn-add-to-wishlist " data-place-id="185">
+                                        <span class="icon-heart">
+                                            <i class="la la-bookmark large"></i>
+                                        </span>                                    
+                                    </a>        -->
+                                    <a class="entry-category rosy-pink">
+                                        <i class="las la-utensils"></i><span>Platillo</span>
+                                    </a>
+                                </div>       
+                                <div class="entry-detail">
+                                   
+                                    <h3 class="place-title"><a >Chalupas</a></h3>
+                                    <div class="entry-bottom">
+                                        <div class="place-preview">
+                                            <div class="place-rating">
+                                                <span>5.0</span>
+                                                <i class="la la-star"></i>
+                                            </div>
+                                        </div>
+    
+                                    </div>
+                                </div>
+                            </div>
+                        </div></div>
+                        <div class="swiper-slide">
+                        <div class="place-item layout-02 place-hover" data-maps_name="antoinette">
+                            <div class="place-inner">
+                                <div class="place-thumb hover-img">
+                                    <a class="entry-thumb" ><img src="assets/assetspuebla/images/listing/platillo5.jpg" alt=""></a>
+                                    <!-- <a class="golo-add-to-wishlist btn-add-to-wishlist " data-place-id="185">
+                                        <span class="icon-heart">
+                                            <i class="la la-bookmark large"></i>
+                                        </span>                                    
+                                    </a>        -->
+                                    <a class="entry-category rosy-pink">
+                                        <i class="las la-utensils"></i><span>Platillo</span>
+                                    </a>
+                                </div>       
+                                <div class="entry-detail">
+                                  
+                                    <h3 class="place-title"><a >Cemitas</a></h3>
+                                    <div class="entry-bottom">
+                                        <div class="place-preview">
+                                            <div class="place-rating">
+                                                <span>5.0</span>
+                                                <i class="la la-star"></i>
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div></div>
+                        <div class="swiper-slide">
+                        <div class="place-item layout-02 place-hover" data-maps_name="kathay_cinema">
+                            <div class="place-inner">
+                                <div class="place-thumb hover-img">
+                                    <a class="entry-thumb" ><img src="assets/assetspuebla/images/listing/platillo6.jpg" alt=""></a>
+                                    <!-- <a class="golo-add-to-wishlist btn-add-to-wishlist " data-place-id="185">
+                                        <span class="icon-heart">
+                                            <i class="la la-bookmark large"></i>
+                                        </span>                                    
+                                    </a>        -->
+                                     <a class="entry-category rosy-pink">
+                                        <i class="las la-utensils"></i><span>Restaurant</span>
+                                    </a>
+                                </div>       
+                                <div class="entry-detail">
+                                   
+                                    <h3 class="place-title"><a >Molotes</a></h3>
+                                    <div class="entry-bottom">
+                                        <div class="place-preview">
+                                            <div class="place-rating">
+                                                <span>5.0</span>
+                                                <i class="la la-star"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div></div>
+                        <div class="swiper-slide">
+                        <div class="place-item layout-02 place-hover" data-maps_name="kathay_cinema">
+                            <div class="place-inner">
+                                <div class="place-thumb hover-img">
+                                    <a class="entry-thumb" ><img src="assets/assetspuebla/images/listing/platillo7.jpg" alt=""></a>
+                                    <!-- <a class="golo-add-to-wishlist btn-add-to-wishlist " data-place-id="185">
+                                        <span class="icon-heart">
+                                            <i class="la la-bookmark large"></i>
+                                        </span>                                    
+                                    </a>        -->
+                                     <a class="entry-category rosy-pink">
+                                        <i class="las la-utensils"></i><span>Platillos</span>
+                                    </a>
+                                </div>       
+                                <div class="entry-detail">
+                                   
+                                    <h3 class="place-title"><a >Tostadas</a></h3>
+                                    <div class="entry-bottom">
+                                        <div class="place-preview">
+                                            <div class="place-rating">
+                                                <span>5.0</span>
+                                                <i class="la la-star"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div></div>
+                        <div class="swiper-slide">
+                        <div class="place-item layout-02 place-hover" data-maps_name="kathay_cinema">
+                            <div class="place-inner">
+                                <div class="place-thumb hover-img">
+                                    <a class="entry-thumb" ><img src="assets/assetspuebla/images/listing/platillo8.jpg" alt=""></a>
+                                    <!-- <a class="golo-add-to-wishlist btn-add-to-wishlist " data-place-id="185">
+                                        <span class="icon-heart">
+                                            <i class="la la-bookmark large"></i>
+                                        </span>                                    
+                                    </a>        -->
+                                     <a class="entry-category rosy-pink">
+                                        <i class="las la-utensils"></i><span>Platillos</span>
+                                    </a>
+                                </div>       
+                                <div class="entry-detail">
+                                   
+                                    <h3 class="place-title"><a >tortitas de Santa Clara</a></h3>
+                                    <div class="entry-bottom">
+                                        <div class="place-preview">
+                                            <div class="place-rating">
+                                                <span>5.0</span>
+                                                <i class="la la-star"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div></div>
+                        </div>
+                    </swiper>  
+                    
+                
+               
             </div>
         </div>
        

@@ -12,6 +12,7 @@ declare var intlTelInput: any;
   styleUrls: ['./packs.component.css']
 })
 export class PacksComponent implements OnInit, AfterViewInit {
+  
   @ViewChild('phoneInput', { static: true }) phoneInput!: ElementRef; // Obtén una referencia al elemento del teléfono en el formulario
  
   name: string = '';
@@ -110,6 +111,26 @@ export class PacksComponent implements OnInit, AfterViewInit {
     window.scrollTo(0, 0);
   }
   ngOnInit(): void {
+    if (this.yeoman.preview.name === undefined) {
+      this.router.navigate(['']);
+    }
+
+    // Verifica si phoneInput.nativeElement está definido antes de utilizarlo
+    if (this.phoneInput && this.phoneInput.nativeElement) {
+      const phoneInput = intlTelInput(this.phoneInput.nativeElement, {
+        separateDialCode: true,
+        preferredCountries: ['us', 'gb', 'es'],
+      });
+
+      if (phoneInput.node) {
+        phoneInput.node.addEventListener('countrychange', () => {
+          this.yeoman.phone = phoneInput.getNumber();
+          console.log('Número de teléfono con código de país:', this.yeoman.phone);
+        });
+      }
+    }
+  }
+  ngOnInitF(): void {
     if(this.yeoman.preview.name===undefined){
       this.router.navigate(['']);
     }

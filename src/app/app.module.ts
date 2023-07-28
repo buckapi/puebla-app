@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { FooterComponent } from './shared/footer/footer/footer.component';
 import { HeaderComponent } from './shared/header/header/header.component';
 import { HttpClient, HttpClientModule,} from '@angular/common/http';
+import {NgxUsefulSwiperModule} from 'ngx-useful-swiper';
 @NgModule({
   declarations: [
     AppComponent,
@@ -15,7 +16,8 @@ import { HttpClient, HttpClientModule,} from '@angular/common/http';
   imports: [
     BrowserModule,
     HttpClientModule,
-    AppRoutingModule
+    AppRoutingModule,
+    NgxUsefulSwiperModule
   ],
   providers: [HttpClientModule],
   bootstrap: [AppComponent]

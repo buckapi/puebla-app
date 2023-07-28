@@ -7,7 +7,7 @@ import { GuidedComponent } from './guided/guided.component';
 import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { AuthRESTService } from '@app/services/authREST.service';
 import { FormsModule } from '@angular/forms';
-
+import { NgxUsefulSwiperModule } from 'ngx-useful-swiper';
 
 @NgModule({
   declarations: [
@@ -17,7 +17,8 @@ import { FormsModule } from '@angular/forms';
     FormsModule,
     HttpClientModule,
     CommonModule,
-    HomeRoutingModule
+    HomeRoutingModule,
+    NgxUsefulSwiperModule
   ],
   providers:[HttpClient,AuthRESTService]
 })
