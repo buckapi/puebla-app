@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, AfterViewInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { PACKS } from '@app/services/packs.service';
 import { CATEGORIES } from '@app/services/categories.service';
@@ -24,7 +24,9 @@ export class TraslationComponent implements OnInit {
     this.packs=PACKS
     this.categories=CATEGORIES
   }
-
+  ngAfterViewInit(): void {
+    window.scrollTo(0, 0);
+  }
   ngOnInit(): void {
   }
 

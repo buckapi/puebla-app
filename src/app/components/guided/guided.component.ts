@@ -35,5 +35,6 @@ export class GuidedComponent implements AfterViewInit {
     this.isMobile = window.innerWidth <= 767;
    }
   ngAfterViewInit(): void {
+    window.scrollTo(0, 0);
   }
 }

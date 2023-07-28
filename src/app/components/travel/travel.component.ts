@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, AfterViewInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Yeoman } from '@app/services/yeoman.service';
 import { travel } from '@app/services/travel.service';
@@ -17,6 +17,9 @@ export class TravelComponent implements OnInit {
     this.travel=travel
   }
 
+  ngAfterViewInit(): void {
+    window.scrollTo(0, 0);
+  }
   ngOnInit(): void {
   }
 
