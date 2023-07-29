@@ -7,17 +7,18 @@ export const PACKS: Pack[] = [
     location: "Puebla",
     description: "Transportation CDMX airport or Puebla Airport - Puebla Hotel round trip.",
     shortDescription: "Transportation CDMX-Puebla Package. Visit Cholula and Tehotihuacan pyramids, 20 relevant spots of Puebla, and points of myths and legends.",
-    items1: "Translator and Historian in every moment",
-    items2: "Visit Cholula and Tehotihuacan pyramids",
-    items3: "Visit 20 relevant spots of Puebla",
-    items4: "Point of myths and legends",
+    items:[
+      "Translator and Historian in every moment",
+      "Visit Cholula and Tehotihuacan pyramids",
+      "Visit 20 relevant spots of Puebla",
+      "Point of myths and legends"  
+    ],
     promocionado: false,
     duration: "4 days", 
     cost: "2000 USD$",
     Includes: " transportation service with driver, translator and guide during the 4 days. Meals, drinks and lodging NOT included. ",
     images: ["assets/assetspuebla/images/city/sydney.jpg"],
-    listering: " ",
-    listering1:" "
+    listerings:[],
   },
   {
     name: "Puebla Package ",
@@ -25,17 +26,22 @@ export const PACKS: Pack[] = [
     location: "Puebla",
     description: "Transportation CDMX or Puebla Airport - Hotel PUEBLA round trip. Translator and Historian in every moment. ",
     shortDescription: "Visit 50 relevant spots of Puebla. Visit Africam Safari. Visit Magical Towns. Gastronomic Tour (More than 20 dishes), Museums and famous spots.",
-    items1:"Visit Cholula and Tehotihuacan pyramids.",
-    items2:"Visit 50 relevant spots of Puebla.",
-    items3:"Visit Africam Safari.",
-    items4:"Visit Magical Towns.",
+    items:[
+      "Visit Cholula and Tehotihuacan pyramids.",
+      "Visit 50 relevant spots of Puebla.",
+      "Visit Africam Safari.",
+      "Visit Magical Towns."
+     ],
     promocionado: false,
     duration: "7 days", 
     cost: "3500 USD$", 
     Includes:" transportation service with driver, translator and guide during the 7 days, Meals, drinks and lodging NOT included.",
     images: ["assets/assetspuebla/images/city/singapo.jpg"],
-    listering: "Gastronomic Tour (More than 20 dishes).    Wine tasting.    Mexican Ethnic Culture Tour.",
-    listering1: "Museums and famous spots   Spot of myths and legends. 7 days of total immersion in the poblano culture, you will eat, drink and live a total poblano experience"
+    listerings: [
+      "Gastronomic Tour (More than 20 dishes).    Wine tasting.    Mexican Ethnic Culture Tour.",
+      "Museums and famous spots   Spot of myths and legends. 7 days of total immersion in the poblano culture, you will eat, drink and live a total poblano experience"
+    ],
+   
   },
   // {
   //   name: "Services",

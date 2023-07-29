@@ -10,11 +10,8 @@ export interface Pack{
 	promocionado?:boolean;
 	duration: string;
 	cost: string;
-	items1: string;
-	items2: string;
-	items3: string;
-	items4: string;
+	items:string[];
 	Includes:string;
-	listering:string;
-	listering1:string;
+	listerings:string[];
+
 }

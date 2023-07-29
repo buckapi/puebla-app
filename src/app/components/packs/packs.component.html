@@ -77,12 +77,10 @@
                         <div class="shop-details__details">
                             <div class="shop-details__sku"><h3>Includes </h3><span>{{yeoman.preview.Includes}}</span></div>
                             <div class="shop-details__cat"><h3>Itinerary</h3> 
-                                <li> {{yeoman.preview.items1}}</li>
-                                <li> {{yeoman.preview.items2}}</li>
-                                <li>{{yeoman.preview.items3}}</li>
-                                <li>{{yeoman.preview.items4}}</li>
-                                <li>{{yeoman.preview.listering}}</li>
-                                <li>{{yeoman.preview.listering1}}</li>
+                                <li *ngFor="let item of yeoman.preview?.items"> {{item}}</li>
+                         
+                                <li *ngFor="let listering of yeoman.preview?.listerings"> {{listering}}</li>
+                             
                             </div>
                         </div>
                         <div class="place__box place__box-hightlight">
@@ -153,10 +151,10 @@
                 
                 <div class="col-lg-4 col-sm-12 superior">
                     <div class="sidebar sidebar--shop sidebar--border">
-                        <!-- <div class="widget-reservation-mini">
+                        <div class="widget-reservation-mini">
                             <h3>Make a reservation</h3>
-                            <a href="" class="open-wg btn">Request</a>
-                        </div> -->
+                            <a (click)="registerUser()" class="open-wg btn">Request</a>
+                        </div>
                         <aside class="widget widget-shadow widget-reservation">
                             <h3>Make a reservation</h3>
                             <form class="form-underline" (ngSubmit)="registerUser()" #registrationForm="ngForm">
