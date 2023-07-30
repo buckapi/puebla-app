@@ -7,7 +7,9 @@ export const travel: Transport[] = [
         cost:"600",
         duration:"",
         itinerary:" Roundtrip ",
-        images: ["assets/assetspuebla/images/city/tokyo.jpeg"]
+        lugares:"Piramida mas grande del mundo",
+        images: ["assets/assetspuebla/images/city/piramide.jpg"]
+        
     },
     {
         name: "Transportation Puebla",
@@ -15,7 +17,8 @@ export const travel: Transport[] = [
         cost:"100",
         duration:" ",
         itinerary:" Roundtrip ",
-        images: ["assets/assetspuebla/images/city/newyork.jpg"]
+        lugares:"Exhacienda",
+        images: ["assets/assetspuebla/images/city/exhacienda.jpg"]
     },
     {
         name: "Transportation per day",
@@ -23,6 +26,35 @@ export const travel: Transport[] = [
         cost:"450",
         duration:" ",
         itinerary:" Per day ",
-        images: ["assets/assetspuebla/images/city/sydney.jpg"]
-    }
+        lugares:"Pueblos magicos",
+        images: ["assets/assetspuebla/images/city/pueblosmagicos.jpg"]
+    },
+    // {
+    //     name: "Africam safari",
+    //     travel: "Driver and translator",
+    //     cost:"",
+    //     duration:" ",
+    //     itinerary:" Per day ",
+    //     lugares:"",
+    //     images: ["assets/assetspuebla/images/city/africamsafari.jpg"]
+    // },
+    // {
+    //     name: "Volcan más pequeño del mundo",
+    //     travel: "Driver and translator",
+    //     cost:"",
+    //     duration:" ",
+    //     itinerary:" Per day ",
+    //     lugares:"",
+    //     images: ["assets/assetspuebla/images/city/volcan.jpg"]
+    // },
+    // {
+    //     name: "Catedral",
+    //     travel: "Driver and translator",
+    //     cost:"",
+    //     duration:" ",
+    //     itinerary:" Per day ",
+    //     lugares:"",
+    //     images: ["assets/assetspuebla/images/city/catedral.jpg"]
+    // }
+
 ];

@@ -6,6 +6,7 @@ import { Yeoman } from '@app/services/yeoman.service';
 import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
 import { travel } from '@app/services/travel.service';
+import { PLACES } from '@app/services/places.services';
 import { UserInterface } from '@app/interfaces/user-interface';
 import { AuthRESTService } from '@app/services/authREST.service';
 import { SwiperOptions } from 'swiper';
@@ -62,7 +63,8 @@ name:string='';
   isHovered: boolean = false;
   showDescription: boolean = false;
   showScrollUpButton = false;
-  travel:any
+  travel:any;
+  places:any;
   constructor(
     public authRESTService:AuthRESTService,
     public script:ScriptService,
@@ -75,6 +77,7 @@ name:string='';
       this.checkIfMobile();
     });
     this.packs=PACKS
+    this.places=PLACES
     this.categories=CATEGORIES
     this.travel=travel
     this.script.load(

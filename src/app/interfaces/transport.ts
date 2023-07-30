@@ -7,5 +7,6 @@ export interface Transport{
 	duration: string;
 	cost: string;
     itinerary: string;
+	lugares:string;
 	
 }
