@@ -100,9 +100,9 @@
     <div class="other-city banner-dark">
         <div class="container">
             <h2 class="title title--while">Explorer Packs</h2>
-            <div class="other-city__content" *ngFor="let pack of packs.slice(0, 8); let index = index">
+            <div class="other-city__content" >
                 <div class="row">
-                    <div class="col-lg-4 col-sm-12">
+                    <div class="col-lg-4 col-sm-12" *ngFor="let pack of packs.slice(0, 8); let index = index">
                         <div class="cities__item hover__box">
                             <div class="cities__thumb hover__box__thumb">
                                 <a title="Puebla" >

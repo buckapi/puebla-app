@@ -572,18 +572,18 @@
 
         /*  [ Scroll ]
         - - - - - - - - - - - - - - - - - - - - */
-        $(window).scroll(function () {
-            if ($(window).scrollTop() > $('.site-header').height()) {
-                $('.listing-nav').addClass('on_scroll');
-            } else {
-                $('.listing-nav').removeClass('on_scroll');
-            }
-            if ($(window).scrollTop() + window.innerHeight >= $('#footer').offset().top) {
-                $('.listing-nav').addClass('is_footer');
-            } else {
-                $('.listing-nav').removeClass('is_footer');
-            }
-        });
+        // $(window).scroll(function () {
+        //     if ($(window).scrollTop() > $('.site-header').height()) {
+        //         $('.listing-nav').addClass('on_scroll');
+        //     } else {
+        //         $('.listing-nav').removeClass('on_scroll');
+        //     }
+        //     if ($(window).scrollTop() + window.innerHeight >= $('#footer').offset().top) {
+        //         $('.listing-nav').addClass('is_footer');
+        //     } else {
+        //         $('.listing-nav').removeClass('is_footer');
+        //     }
+        // });
 
         $('.nav-scroll a[href^="#"]').on('click', function (event) {
 

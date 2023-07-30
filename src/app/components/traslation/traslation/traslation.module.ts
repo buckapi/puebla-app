@@ -4,7 +4,6 @@ import { CommonModule } from '@angular/common';
 import { TraslationRoutingModule } from './traslation-routing.module';
 import { TraslationComponent } from './traslation.component';
 
-
 @NgModule({
   declarations: [
     TraslationComponent

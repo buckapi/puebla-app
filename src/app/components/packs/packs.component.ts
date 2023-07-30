@@ -5,6 +5,8 @@ import { CATEGORIES } from '@app/services/categories.service';
 import { Yeoman } from '@app/services/yeoman.service';
 import { AuthRESTService } from '@app/services/authREST.service';
 import { HttpClient } from '@angular/common/http';
+
+import { DeviceDetectorService } from 'ngx-device-detector';
 declare var intlTelInput: any; 
 @Component({
   selector: 'app-packs',
@@ -14,7 +16,7 @@ declare var intlTelInput: any;
 export class PacksComponent implements OnInit, AfterViewInit {
   
   @ViewChild('phoneInput', { static: true }) phoneInput!: ElementRef; // Obtén una referencia al elemento del teléfono en el formulario
- 
+  deviceInfo:any;
   name: string = '';
   phone:string='';
   email: string = '';
@@ -28,10 +30,12 @@ export class PacksComponent implements OnInit, AfterViewInit {
   showScrollUpButton = false;
 
   constructor(
+    private deviceService: DeviceDetectorService,
     private authRESTService: AuthRESTService,
     private router:Router,
     public yeoman:Yeoman
   ) {
+    this.epicFunction();
     this.checkIfMobile();
     window.addEventListener('resize', () => {
       this.checkIfMobile();
@@ -41,6 +45,14 @@ export class PacksComponent implements OnInit, AfterViewInit {
    }
    checkIfMobile() {
     this.isMobile = window.innerWidth <= 767;
+  }
+  request() {
+    const phoneNumber = '+5212216482271';
+    const message = `Hello, I want to book the package "${this.yeoman.preview.name}"`;
+    const encodedMessage = encodeURIComponent(message);
+
+    const url = `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${encodedMessage}`;
+    window.open(url, '_blank');
   }
   sendMessageToWhatsApp() {
     const phoneNumber = '+5212216482271';
@@ -107,6 +119,18 @@ export class PacksComponent implements OnInit, AfterViewInit {
       }
     );
   }
+
+  epicFunction() {
+    this.deviceInfo = this.deviceService.getDeviceInfo()!;
+    const isMobile = this.deviceService.isMobile();
+    const isTablet = this.deviceService.isTablet();
+    const isDesktopDevice = this.deviceService.isDesktop();
+    console.log(this.deviceInfo);
+    console.log(isMobile);
+    console.log(isTablet);
+    console.log(isDesktopDevice);
+  }
+
   ngAfterViewInit(): void {
     window.scrollTo(0, 0);
   }
