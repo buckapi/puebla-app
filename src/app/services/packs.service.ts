@@ -15,7 +15,7 @@ export const PACKS: Pack[] = [
     ],
     promocionado: false,
     duration: "4 days", 
-    cost: "2000 USD$",
+    cost: "2000",
     Includes: " transportation service with driver, translator and guide during the 4 days. Meals, drinks and lodging NOT included. ",
     images: ["assets/assetspuebla/images/city/sydney.jpg"],
     listerings:[],
@@ -34,7 +34,7 @@ export const PACKS: Pack[] = [
      ],
     promocionado: false,
     duration: "7 days", 
-    cost: "3500 USD$", 
+    cost: "3500", 
     Includes:" transportation service with driver, translator and guide during the 7 days, Meals, drinks and lodging NOT included.",
     images: ["assets/assetspuebla/images/city/singapo.jpg"],
     listerings: [

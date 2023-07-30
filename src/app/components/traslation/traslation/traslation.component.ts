@@ -28,7 +28,11 @@ export class TraslationComponent implements OnInit {
     this.categories=CATEGORIES
   }
 
-  
+  setPreview(index:any){
+    this.yeoman.preview=this.packs[index];
+    this.yeoman.type="pack";
+    this.router.navigate(['/packs']);
+  }
   ngAfterViewInit(): void {
     window.scrollTo(0, 0);
   }

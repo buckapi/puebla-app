@@ -44,7 +44,7 @@
                        <div class="place__box place__box--npd" >
                         <h1>{{yeoman.preview.name}}</h1>
                         <div class="place__meta">
-                            <div class="place__currency">$$ {{yeoman.preview.cost}}</div>
+                            <div class="place__currency"><strong> Price:</strong> $ USD {{yeoman.preview.cost}}</div>
                         </div><!-- .place__meta -->
                         </div>
                         <div class="place__box place__box-overview">
@@ -83,8 +83,96 @@
                        
                     </div>
                 </div>
-                
+                <div class="col-lg-8 col-sm-12 superior superior1" *ngIf="yeoman.type=='transportation'">
+                    <div class="place__left">
+                        <ul class="place__breadcrumbs breadcrumbs">
+                            <li><a title="France">Guided travel</a></li>
+                        </ul>
+                        
+                        <div class="intro__meta">
+                                <div class="row">
+                                    <div class="col-4 col-sm-4">
+                                        <div class="intro__meta__item">
+                                            <h3>Currency</h3>
+                                            <p>
+                                                <i class="la la-money-bill"></i>
+                                                <span>U.S. dollar</span>
+                                            </p>
+                                        </div><!-- .intro__meta__item -->
+                                    </div>
+                                    <div class="col-4 col-sm-4">
+                                        <div class="intro__meta__item">
+                                            <h3>Languages</h3>
+                                            <p>
+                                               <li><i class="la la-globe"></i> <span>English</span></li>
+                                               <li><i class="la la-globe"></i><span>Spanish</span></li>
+                                            </p>
+                                        </div><!-- .intro__meta__item -->
+                                    </div>
+                                    <div class="col-4 col-sm-4">
+                                        <div class="intro__meta__item">
+                                            <h3>Duration</h3>
+                                            <p>
+                                                <i class="la la-clock"></i>
+                                                <span>{{yeoman.preview.duration}}</span>
+                                            </p>
+                                        </div><!-- .intro__meta__item -->
+                                    </div>
+                                </div>
+                        </div>
+                      
+                       <div class="place__box place__box--npd" >
+                        <h1>{{yeoman.preview.name}}</h1>
+                        <div class="place__meta">
+                            
+                            <div class="place__currency"><h3><strong> Price: </strong>$ USD{{yeoman.preview.cost}}</h3> </div>
+                        </div><!-- .place__meta -->
+                        </div>
+                        <div class="place__box place__box-overview">
+                            <h3></h3>
+                            <div class="intro__text">{{yeoman.preview.description}}</div>
+                        </div>
+                        <div class="shop-details__details">
+                            <div class="shop-details__sku"><h3>Details of Transportation </h3><span>{{yeoman.preview.travel}}</span></div>
+                            <div class="shop-details__cat"><h3>Itinerary</h3><span>{{yeoman.preview.itinerary}}</span>
+                              
+                            </div>
+                        </div> 
+                   
+                       
+                    </div>
+                </div>
                 <div class="col-lg-4 col-sm-12 superior">
+                    <div class="sidebar sidebar--shop sidebar--border">
+                        <div class="widget-reservation-mini">
+                            <h3>Make a reservation</h3>
+                            <a   class="open-wg btn" (click)="request()" >Request</a>
+                        </div>
+                        <aside class="widget widget-shadow widget-reservation" [hidden]="isMobile">
+                            <h3 [hidden]="yeoman.type=='transportation'">Make a reservation</h3>
+                            <h3 *ngIf="yeoman.type=='transportation'">Make a reservation of {{yeoman.preview.name}}</h3>
+                            <form class="form-underline" (ngSubmit)="registerUser()" #registrationForm="ngForm">
+                                <div class="field-input">
+                                  <input type="text" placeholder="Name" [(ngModel)]="name" name="name" required>
+                                </div>
+                                <div class="field-input">
+                                  <input type="email" placeholder="Email" [(ngModel)]="email" name="email" required>
+                                </div>
+                                <div class="field-input">
+                                  <input type="password" placeholder="Password" [(ngModel)]="password" name="password" required>
+                                </div>
+                                <div class="field-input">
+                                    <input #phoneInput type="tel" placeholder="Phone" [(ngModel)]="yeoman.phone"name="phone" required>
+                                  </div>
+                               <span [hidden]="!sending">Please wait...</span>
+
+                                <button type="button" name="submit" class="right-header__button btn" [hidden]="sending" (click)="registerUser()" style="margin: 10%;">Request a book</button>
+                            </form>
+                        </aside>
+                    </div>
+                </div>
+                
+                <!-- <div class="col-lg-4 col-sm-12 superior">
                     <div class="sidebar sidebar--shop sidebar--border">
                         <div class="widget-reservation-mini">
                             <h3>Make a reservation</h3>
@@ -111,7 +199,8 @@
                             </form>
                         </aside>
                     </div>
-                </div>
+                </div> -->
+                
             </div>
         </div>
     </div>
