@@ -1,34 +1,34 @@
 import { Transport } from "@app/interfaces/transport";
 
 export const PLACES: Transport[] = [
-    // {
-    //     name: "Transportation cdmx",
-    //     travel: "cdmx (airport) - Puebla",
-    //     cost:"600",
-    //     duration:"",
-    //     itinerary:" Roundtrip ",
-    //     lugares:"Piramida mas grande del mundo",
-    //     images: ["assets/assetspuebla/images/city/piramide.jpg"]
+    {
+        name: "World's largest pyramid",
+        travel: "Driver and translator",
+        cost:"",
+        duration:"",
+        itinerary:" Roundtrip ",
+        lugares:"",
+        images: ["assets/assetspuebla/images/city/piramide.jpg"]
         
-    // },
-    // {
-    //     name: "Transportation Puebla",
-    //     travel: "Puebla (airport) - Puebla",
-    //     cost:"100",
-    //     duration:" ",
-    //     itinerary:" Roundtrip ",
-    //     lugares:"Exhacienda",
-    //     images: ["assets/assetspuebla/images/city/exhacienda.jpg"]
-    // },
-    // {
-    //     name: "Transportation per day",
-    //     travel: "Driver and translator",
-    //     cost:"450",
-    //     duration:" ",
-    //     itinerary:" Per day ",
-    //     lugares:"Pueblos magicos",
-    //     images: ["assets/assetspuebla/images/city/pueblosmagicos.jpg"]
-    // },
+    },
+    {
+        name: "Ex-hacienda",
+        travel: "Driver and translator",
+        cost:"",
+        duration:" ",
+        itinerary:" Roundtrip ",
+        lugares:"",
+        images: ["assets/assetspuebla/images/city/exhacienda.jpg"]
+    },
+    {
+        name: "Magical towns",
+        travel: "Driver and translator",
+        cost:"",
+        duration:" ",
+        itinerary:" Per day ",
+        lugares:"",
+        images: ["assets/assetspuebla/images/city/pueblosmagicos.jpg"]
+    },
     {
         name: "Africam safari",
         travel: "Driver and translator",
@@ -39,7 +39,7 @@ export const PLACES: Transport[] = [
         images: ["assets/assetspuebla/images/city/africamsafari.jpg"]
     },
     {
-        name: "Volcan más pequeño del mundo",
+        name: "World's smallest volcano",
         travel: "Driver and translator",
         cost:"",
         duration:" ",
@@ -48,7 +48,7 @@ export const PLACES: Transport[] = [
         images: ["assets/assetspuebla/images/city/volcan.jpg"]
     },
     {
-        name: "Catedral",
+        name: "Cathedral",
         travel: "Driver and translator",
         cost:"",
         duration:" ",

@@ -7,7 +7,7 @@ export const travel: Transport[] = [
         cost:"600",
         duration:"",
         itinerary:" Roundtrip ",
-        lugares:"Piramida mas grande del mundo",
+        lugares:"World's largest pyramid",
         images: ["assets/assetspuebla/images/city/piramide.jpg"]
         
     },
@@ -17,7 +17,7 @@ export const travel: Transport[] = [
         cost:"100",
         duration:" ",
         itinerary:" Roundtrip ",
-        lugares:"Exhacienda",
+        lugares:"Ex-hacienda",
         images: ["assets/assetspuebla/images/city/exhacienda.jpg"]
     },
     {
@@ -26,7 +26,7 @@ export const travel: Transport[] = [
         cost:"450",
         duration:" ",
         itinerary:" Per day ",
-        lugares:"Pueblos magicos",
+        lugares:"Magical towns",
         images: ["assets/assetspuebla/images/city/pueblosmagicos.jpg"]
     },
     // {

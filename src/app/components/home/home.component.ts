@@ -46,6 +46,10 @@ export class HomeComponent implements AfterViewInit {
     },
   };
 
+
+
+
+
 name:string='';
   firstName: string = '';
   lastName: string = '';
@@ -71,6 +75,7 @@ name:string='';
     public yeoman:Yeoman,
     public router:Router
   ) {
+   
   // this.agregarUsuario();
     this.checkIfMobile();
     window.addEventListener('resize', () => {
@@ -109,6 +114,25 @@ name:string='';
     this.yeoman.preview=this.travel[index];
     this.router.navigate(['/packs']);
   }
+  sendToWhatsapp(i:any){
+    const phoneNumber = '+5212216482271';
+    const message = `Hello, I want to visit this place: "${this.places[i].name}"`;
+    const encodedMessage = encodeURIComponent(message);
+    const url = `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${encodedMessage}`;
+    window.open(url, '_blank');
+  }
+
+
+  // request() {
+  //   const phoneNumber = '+5212216482271';
+  //   const message = `Hello, I want to book the package "${this.yeoman.preview.name}"`;
+  //   const encodedMessage = encodeURIComponent(message);
+
+  //   const url = `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${encodedMessage}`;
+  //   window.open(url, '_blank');
+  // }
+
+
   agregarUsuario() {
     // Datos del nuevo usuario a registrar
     const nuevoUsuario: UserInterface = {
