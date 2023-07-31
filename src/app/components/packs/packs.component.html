@@ -65,6 +65,8 @@
                     </div>
                 </div>
                 <div class="col-lg-8 col-sm-12 superior superior1" *ngIf="yeoman.type=='transportation'">
+                    
+                    <!-- <div class="place-slider__item"><img [src]="yeoman.preview.images[0]" alt="slider-01"></div> -->
                     <div class="place__left">
                         <ul class="place__breadcrumbs breadcrumbs">
                             <li><a title="France">Guided travel</a></li>
@@ -101,26 +103,27 @@
                                     </div>
                                 </div>
                         </div>
-                      
-                       <div class="place__box place__box--npd" >
-                        <h1>{{yeoman.preview.name}}</h1>
-                        <div class="place__meta">
-                            
-                            <div class="place__currency"><h3><strong> Price: </strong>$ USD{{yeoman.preview.cost}}</h3> </div>
-                        </div><!-- .place__meta -->
-                        </div>
-                        <div class="place__box place__box-overview">
-                            <h3></h3>
-                            <div class="intro__text">{{yeoman.preview.description}}</div>
-                        </div>
-                        <div class="shop-details__details">
-                            <div class="shop-details__sku"><h3>Details of Transportation </h3><span>{{yeoman.preview.travel}}</span></div>
-                            <div class="shop-details__cat"><h3>Itinerary</h3><span>{{yeoman.preview.itinerary}}</span>
-                              
+                        <div class="row alt">
+                            <div class="col-lg-6 col-sm-12">
+                                <div class="place__box place__box--npd" >
+                                    <h1>{{yeoman.preview.name}}</h1>
+                                    <div class="place__meta">
+                                        
+                                        <div class="place__currency"><h3><strong> Price: </strong>$ USD{{yeoman.preview.cost}}</h3> </div>
+                                    </div><!-- .place__meta -->
+                                    </div>
+                                   
+                                    <div class="shop-details__details">
+                                        <div class="shop-details__sku"><h3>Details of Transportation </h3><span>{{yeoman.preview.travel}}</span></div>
+                                        <div class="shop-details__cat"><h3>Itinerary</h3><span>{{yeoman.preview.itinerary}}</span>
+                                          
+                                        </div>
+                                    </div> 
                             </div>
-                        </div> 
-                   
-                       
+                            <div class="col-lg-6 col-sm-12" >
+                            <img [src]="yeoman.preview.images[0]" alt="Our Company" style="border-radius: 10%;">
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="col-lg-4 col-sm-12 superior">
