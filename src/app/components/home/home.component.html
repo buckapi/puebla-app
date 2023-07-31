@@ -365,7 +365,7 @@
                     <p>Transportation</p>
                 </div>
                 <div class="area-places">
-                    <div class="place-item layout-02 place-hover" data-maps_name="mattone_restaurant" *ngFor="let transport of travel.slice(0, 8); let index = index"  (click)="setTransportationPreview(index)">
+                    <div class="place-item layout-02 place-hover" data-maps_name="mattone_restaurant" *ngFor="let transport of travel.slice(0, 8); let index = index">
                         <div class="place-inner">
                             <div class="place-thumb hover-img">
                                 <a class="entry-thumb" ><img [src]="transport.images[0]" alt=""></a>
@@ -391,7 +391,7 @@
                                             <span>5.0</span>
                                             <i class="la la-star"></i>
                                         </div>
-                                        <a class="btn-solicitar view1" style=" cursor: pointer;" >
+                                        <a class="btn-solicitar view1" style=" cursor: pointer;"  href="https://wa.me/+5212216482271?text=Hello!!%20I%20want%20buy%20the%20gastronomic%20tour!" target="_blank">
                                             <span>Request a book</span>
                                         </a>
                                     </div>
@@ -404,7 +404,9 @@
                 
                 </div>
                 <div class="area-places">
-                    <div class="place-item layout-02 place-hover" data-maps_name="mattone_restaurant" *ngFor="let transport of places.slice(0, 8); let index = index"  (click)="setTransportationPreview(index)">
+                    <div class="place-item layout-02 place-hover" data-maps_name="mattone_restaurant" *ngFor="let transport of places.slice(0, 8); let index = index">
+                        <!-- <div class="place-item layout-02 place-hover" data-maps_name="mattone_restaurant" *ngFor="let transport of places.slice(0, 8); let index = index"  (click)="setTransportationPreview(index)"> -->
+
                         <div class="place-inner">
                             <div class="place-thumb hover-img">
                                 <a class="entry-thumb" ><img [src]="transport.images[0]" alt=""></a>
@@ -429,9 +431,9 @@
                                             <span>5.0</span>
                                             <i class="la la-star"></i>
                                         </div>
-                                        <!-- <a class="btn-solicitar view1" style=" cursor: pointer;" >
+                                        <a class="btn-solicitar view1" style=" cursor: pointer;" href="https://wa.me/+5212216482271?text=Hello!!%20I%20want%20buy%20the%20gastronomic%20tour!" target="_blank" >
                                             <span>Request a book</span>
-                                        </a> -->
+                                        </a>
                                     </div>
                                     
                                 </div>
