@@ -105,7 +105,7 @@
   
     
   }
-  .cities__thumb {
+.cities__thumb {
   position: relative;
 }
 
@@ -119,6 +119,7 @@
   background-color: rgba(0, 0, 0, 0.6); /* Fondo negro translúcido */
   z-index: 0;
 }
+
 @media (max-width: 767px) {
   .mobile-specific-div {
     margin-top: 80% !important;
