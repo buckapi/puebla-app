@@ -1,107 +1,5 @@
 <div id="wrapper">
-    <!-- .site-header -->
-    <header id="header" class="site-header">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-xl-6 col-5">
-                    <div class="site">
-                        <div class="site__menu">
-                            <a title="Menu Icon"  class="site__menu__icon">
-                                <i class="las la-bars la-24-black"></i>
-                            </a>
-                            <div class="popup-background"></div>
-                            <div class="popup popup--left">
-                                <a title="Close"  class="popup__close">
-                                    <i class="las la-times la-24-black"></i>
-                                </a><!-- .popup__close -->
-                                <div class="popup__content">
-                                    <div class="popup__user popup__box open-form">
-                                        <a title="Login"  class="open-login">Login</a>
-                                    </div><!-- .popup__user -->
-                                    
-                                    <div class="popup__menu popup__box">
-                                        <ul class="menu-arrow">
-                                          <li routerLink="/">Home</li>
-                                          <li routerLink="/guided">Guided tour</li>
-                                          <li routerLink="/traslation">Translator</li>
-                                          <li routerLink="/travel">Transport</li>  
-                                        </ul>
-                                      </div>
-                                </div>
-                            
-                            </div><!-- .popup -->
-                        </div><!-- .site__menu -->
-                        <div class="site__brand">
-                            <a title="Logo" class="site__brand__logo"><img src="assets/assetspuebla/images/assets/logo.png" alt="Golo"></a>
-                        </div><!-- .site__brand -->
-                        
-                    </div><!-- .site -->
-                </div><!-- .col-md-6 -->
-                <div class="col-xl-6 col-7">
-                    <div class="right-header align-right">
-                        
-                        <div class="right-header__login">
-                            <a title="guidedtravel" style="cursor: pointer;" routerLink="/" [hidden]="router.url.includes('site')">Home</a>
-                        </div><!-- .right-header__login -->
-                        <div class="right-header__login">
-                            <a title="Login" class="open-login" style="cursor: pointer;" [hidden]="yeoman.isLogged">Login</a>
-                        </div>
-                        <div class="right-header__login">
-                            <a title="Login"  style="cursor: pointer;" [hidden]="!yeoman.isLogged" (click)="logOut()">Logout</a>
-                        </div>
-                        <div class="right-header__button btn"  [hidden]="!yeoman.isLogged">
-                          <a title="Add place"  routerLink="/my">
-                              <!-- <i class="las la-cart-arrow-down "></i> -->
-                              <span [hidden]="yeoman.userType=='admin'">My GuidedTravel</span>
-                              <span [hidden]="yeoman.userType!=='admin'">Booking System</span>
-                          </a>
-                      </div>
-                      <div class="right-header__button btn" [hidden]="yeoman.userType=='admin'">
-                        <a title="whatsapp" href="https://wa.me/+5212216482271?text=Hello!!%20I%20request%20a%20service"  target="_blank" title="Support" style="color: white;"> 
-                            
-                            <i class="la la-whatsapp"></i>
-                        </a>
-                      </div>
-                      
-                        <div class="popup popup-form">
-                            <a title="Close"  class="popup__close">
-                                <i class="las la-times la-24-black"></i>
-                            </a><!-- .popup__close -->
-                            <ul class="choose-form">
-                            </ul>
-                            <div class="popup-content">
-                              
-                                  
-                                  <form class="form-log form-content" id="login" (ngSubmit)="loginUser()" #loginForm="ngForm">
-                                    <div class="field-input">
-                                      <input type="text" placeholder="Email" [(ngModel)]="email" name="user" required>
-                                    </div>
-                                    <div class="field-input">
-                                      <input type="password" placeholder="Contraseña" [(ngModel)]="password" name="password" required>
-                                    </div>
-                                    <!-- Puedes agregar un mensaje para mostrar errores de inicio de sesión si lo deseas -->
-                                    <div *ngIf="loginError" class="error-message">
-                                      {{ loginError }}
-                                    </div>
-                                    <input type="submit" name="submit" [disabled]="!loginForm.valid" value="Entrar">
-                                  </form>
-                            </div>
-                        </div><!-- .popup-form -->
-                        <div class="right-header__search">
-                            <a title="whatsapp" href="https://wa.me/+5212216482271?text=Hello!!%20I%20request%20a%20service" target="_blank" title="Support" style="color: white;"> 
-                                >
-                                <i class="la la-whatsapp"></i>
-                            </a>
-                        
-                        </div>
-                       </div>
-                </div><!-- .col-md-6 -->
-            </div><!-- .row -->
-        </div><!-- .container-fluid -->
-    </header>
-
-  
-    <main id="main" class="site-main overflow">
+   
         <div class="site-banner" style="background-image: url(assets/assetspuebla/images/bg/top-banner.png);">
             <div class="container">
                 <div class="site-banner__content page-container">
@@ -235,8 +133,6 @@
               </div>
           </div>
         </div>
-        
-        
         <section class="places-wrap">
             <div class="container">
                 <div class="title-wrap align-center">
@@ -286,8 +182,6 @@
                 </div>
             </div>
         </section>
-            
-        
         <div class="banner-apps" style="background-image: url(assets/assetspuebla/images/bg/bg-join-us.jpg);">
             <div class="container">
                 <div class="banner-apps__content">
@@ -304,48 +198,45 @@
         </div><!-- .banner-apps -->
         <div class="trending trending-business">
             <div class="container">
-              <!-- <h2 class="title title-border-bottom align-center offset-item animate" id="mobile-platillo"> <br> Estos y más platillos se degustan en Puebla</h2> -->
-              <div class="title-wrap align-center">
+            <div class="title-wrap align-center">
                 <h2>Popular dishes in Puebla</h2>
                 <p>These and more dishes are tasted in Puebla</p>
             </div>
-               
-                    <swiper [config]="config2" > 
-                        <div class="swiper-wrapper" >
-                            <div class="swiper-slide">
-                                <div class="place-item layout-02 place-hover" data-maps_name="mattone_restaurant">
-                          <div class="place-inner">
-                              <div class="place-thumb hover-img">
-                                  <a class="entry-thumb" ><img src="assets/assetspuebla/images/listing/platillo1.jpg" alt=""></a>
-                                  <!-- <a class="golo-add-to-wishlist btn-add-to-wishlist " data-place-id="185">
-                                      <span class="icon-heart">
-                                          <i class="la la-bookmark large"></i>
-                                      </span>                                    
-                                  </a>        -->
-                                  <a class="entry-category rosy-pink">
-                                      <i class="las la-utensils"></i><span>Bebidas</span>
-                                  </a>
-                              </div>       
-                              <div class="entry-detail">
-                                  
-                                  <h3 class="place-title"><a >Degutación de licores</a></h3>
-                                  <div class="entry-bottom">
-                                      <div class="place-preview">
-                                          <div class="place-rating">
-                                              <span>5.0</span>
-                                              <i class="la la-star"></i>
-                                          </div>
-                                         
-                                      </div>
-                                    <!--  <div class="place-price">
-                                          <span>$$</span>
-                                      </div> -->
-                                  </div>
-                              </div>
-                          </div>
-                      </div>
+            <swiper [config]="config2" > 
+                <div class="swiper-wrapper" >
+                    <div class="swiper-slide">
+                        <div class="place-item layout-02 place-hover" data-maps_name="mattone_restaurant">
+                            <div class="place-inner">
+                                <div class="place-thumb hover-img">
+                                    <a class="entry-thumb" ><img src="assets/assetspuebla/images/listing/platillo1.jpg" alt=""></a>
+                                    <!-- <a class="golo-add-to-wishlist btn-add-to-wishlist " data-place-id="185">
+                                        <span class="icon-heart">
+                                            <i class="la la-bookmark large"></i>
+                                        </span>                                    
+                                    </a>        -->
+                                    <a class="entry-category rosy-pink">
+                                        <i class="las la-utensils"></i><span>Bebidas</span>
+                                    </a>
+                                </div>       
+                                <div class="entry-detail">
+                                    
+                                    <h3 class="place-title"><a >Degutación de licores</a></h3>
+                                    <div class="entry-bottom">
+                                        <div class="place-preview">
+                                            <div class="place-rating">
+                                                <span>5.0</span>
+                                                <i class="la la-star"></i>
+                                            </div>
+                                            
+                                        </div>
+                                        <!--  <div class="place-price">
+                                            <span>$$</span>
+                                        </div> -->
+                                    </div>
+                                </div>
                             </div>
-                                
+                        </div>
+                    </div>                                
                     <div class="swiper-slide">
                         <div class="place-item layout-02 place-hover" data-maps_name="mattone_restaurant">
                             <div class="place-inner">
@@ -370,16 +261,17 @@
                                                 <span>5.0</span>
                                                 <i class="la la-star"></i>
                                             </div>
-                                           
+                                        
                                         </div>
-                                      <!--  <div class="place-price">
+                                    <!--  <div class="place-price">
                                             <span>$$</span>
                                         </div> -->
                                     </div>
                                 </div>
                             </div>
-                        </div></div>
-                        <div class="swiper-slide">
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
                         <div class="place-item layout-02 place-hover" data-maps_name="retro_fitness">
                             <div class="place-inner">
                                 <div class="place-thumb hover-img">
@@ -394,7 +286,7 @@
                                     </a>
                                 </div>       
                                 <div class="entry-detail">
-                                   
+                                
                                     <h3 class="place-title"><a >Mole poblano</a></h3>
                                     <!-- <div class="open-now"><i class="las la-door-open"></i>Open now</div> -->
                                     <div class="entry-bottom">
@@ -404,12 +296,13 @@
                                                 <i class="la la-star"></i>
                                             </div>
                                         </div>
-                                      
+                                    
                                     </div>
                                 </div>
                             </div>
-                        </div></div>
-                        <div class="swiper-slide">
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
                         <div class="place-item layout-02 place-hover" data-maps_name="body_spa">
                             <div class="place-inner">
                                 <div class="place-thumb hover-img">
@@ -424,7 +317,7 @@
                                     </a>
                                 </div>       
                                 <div class="entry-detail">
-                                   
+                                
                                     <h3 class="place-title"><a >Chalupas</a></h3>
                                     <div class="entry-bottom">
                                         <div class="place-preview">
@@ -437,8 +330,9 @@
                                     </div>
                                 </div>
                             </div>
-                        </div></div>
-                        <div class="swiper-slide">
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
                         <div class="place-item layout-02 place-hover" data-maps_name="antoinette">
                             <div class="place-inner">
                                 <div class="place-thumb hover-img">
@@ -453,7 +347,7 @@
                                     </a>
                                 </div>       
                                 <div class="entry-detail">
-                                  
+                                
                                     <h3 class="place-title"><a >Cemitas</a></h3>
                                     <div class="entry-bottom">
                                         <div class="place-preview">
@@ -466,8 +360,9 @@
                                     </div>
                                 </div>
                             </div>
-                        </div></div>
-                        <div class="swiper-slide">
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
                         <div class="place-item layout-02 place-hover" data-maps_name="kathay_cinema">
                             <div class="place-inner">
                                 <div class="place-thumb hover-img">
@@ -477,12 +372,12 @@
                                             <i class="la la-bookmark large"></i>
                                         </span>                                    
                                     </a>        -->
-                                     <a class="entry-category rosy-pink">
+                                    <a class="entry-category rosy-pink">
                                         <i class="las la-utensils"></i><span>Restaurant</span>
                                     </a>
                                 </div>       
                                 <div class="entry-detail">
-                                   
+                                
                                     <h3 class="place-title"><a >Molotes</a></h3>
                                     <div class="entry-bottom">
                                         <div class="place-preview">
@@ -494,8 +389,9 @@
                                     </div>
                                 </div>
                             </div>
-                        </div></div>
-                        <div class="swiper-slide">
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
                         <div class="place-item layout-02 place-hover" data-maps_name="kathay_cinema">
                             <div class="place-inner">
                                 <div class="place-thumb hover-img">
@@ -505,12 +401,12 @@
                                             <i class="la la-bookmark large"></i>
                                         </span>                                    
                                     </a>        -->
-                                     <a class="entry-category rosy-pink">
+                                    <a class="entry-category rosy-pink">
                                         <i class="las la-utensils"></i><span>Platillos</span>
                                     </a>
                                 </div>       
                                 <div class="entry-detail">
-                                   
+                                
                                     <h3 class="place-title"><a >Tostadas</a></h3>
                                     <div class="entry-bottom">
                                         <div class="place-preview">
@@ -522,8 +418,9 @@
                                     </div>
                                 </div>
                             </div>
-                        </div></div>
-                        <div class="swiper-slide">
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
                         <div class="place-item layout-02 place-hover" data-maps_name="kathay_cinema">
                             <div class="place-inner">
                                 <div class="place-thumb hover-img">
@@ -533,12 +430,12 @@
                                             <i class="la la-bookmark large"></i>
                                         </span>                                    
                                     </a>        -->
-                                     <a class="entry-category rosy-pink">
+                                    <a class="entry-category rosy-pink">
                                         <i class="las la-utensils"></i><span>Platillos</span>
                                     </a>
                                 </div>       
                                 <div class="entry-detail">
-                                   
+                                
                                     <h3 class="place-title"><a >tortitas de Santa Clara</a></h3>
                                     <div class="entry-bottom">
                                         <div class="place-preview">
@@ -550,16 +447,11 @@
                                     </div>
                                 </div>
                             </div>
-                        </div></div>
                         </div>
-                    </swiper>  
-                    
-                
-               
+                    </div>
+                </div>
+            </swiper>
             </div>
         </div>
-       
-        
-    </main><!-- .site-main -->
-  
-  </div>
+   
+</div> 

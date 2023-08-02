@@ -10,6 +10,7 @@ import { PLACES } from '@app/services/places.services';
 import { UserInterface } from '@app/interfaces/user-interface';
 import { AuthRESTService } from '@app/services/authREST.service';
 import { SwiperOptions } from 'swiper';
+
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -17,24 +18,11 @@ import { SwiperOptions } from 'swiper';
 })
 export class HomeComponent implements AfterViewInit {
 
-  config: SwiperOptions = {
-    a11y: { enabled: true },
-    direction: 'horizontal',
-    slidesPerView: 2,
-    keyboard: true,
-    mousewheel: false,
-    scrollbar: false,
-    pagination: false,
-    spaceBetween: 25,
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev'
-    },
-  };
+  
   config2: SwiperOptions = {
     a11y: { enabled: true },
     direction: 'horizontal',
-    slidesPerView: 2,
+    slidesPerView: 4,
     keyboard: true,
     mousewheel: false,
     scrollbar: false,
@@ -46,20 +34,13 @@ export class HomeComponent implements AfterViewInit {
     },
   };
 
-
-
-
-
-name:string='';
+  name:string='';
   firstName: string = '';
   lastName: string = '';
   email: string = '';
   password: string = '';
   acceptTerms: boolean = false;
-
- 
   loginError: string | null = null;
-
   title = 'pueblapp';
   isMobile:any;
   packs:any;
@@ -69,6 +50,7 @@ name:string='';
   showScrollUpButton = false;
   travel:any;
   places:any;
+
   constructor(
     public authRESTService:AuthRESTService,
     public script:ScriptService,
