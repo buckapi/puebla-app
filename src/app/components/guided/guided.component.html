@@ -1,4 +1,3 @@
-<main id="main" class="site-main">
     <div class="page-title" style="background-image: url(assets/assetspuebla/images/city/puebla-puebla.jpg);">
         <div class="container">
             <div class="page-title__content">
@@ -8,74 +7,101 @@
             </div>
         </div>	
     </div>
-    
     <div class="intro">
         <div class="container">
-            <div class="intro__meta">
-                <div class="row">
-                    <div class="col-4 col-sm-4">
-                        <div class="intro__meta__item">
-                            <h3>Currency</h3>
-                            <p>
-                                <i class="la la-money-bill"></i>
-                                <span>U.S. dollar</span>
-                            </p>
-                        </div>
-                    </div>
-                    <div class="col-4 col-sm-4">
-                        <div class="intro__meta__item">
-                            <h3>Languages</h3>
-                            <p>
-                               <li><i class="la la-globe"></i> <span>English</span></li>
-                               <li><i class="la la-globe"></i><span>Spanish</span></li>
-                            </p>
-                        </div>
-                    </div>
-                    <div class="col-4 col-sm-4">
-                        <div class="intro__meta__item">
-                            <h3>Availability</h3>
-                            <p>
-                                <i class="la la-clock"></i>
-                                <span>7 days</span>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
             <h2 class="title">What it is about?</h2>
-            <div class="intro__text">Get to know must-see spots, exquisite gastronomy and a complete experience</div>
             <div class="intro__content">
                 <div class="row">
-                    <div class="col-lg-8">
-                        <div class="place__box place__box--npd" >
-                            <div class="place__meta">
-                                <div class="place__currency"><h3><strong> Price:</strong> $ USD 3500</h3></div>
-                            </div><!-- .place__meta -->
-                            </div>
-                            <div class="place__box place__box-overview">
-                                <h3>Details</h3>
-                                <div class="intro__text">Transportation CDMX or Puebla Airport - Hotel PUEBLA round trip. Translator and Historian in every moment.</div>
-                                <div class="intro-text">isit 50 relevant spots of Puebla. Visit Africam Safari. Visit Magical Towns. Gastronomic Tour (More than 20 dishes), Museums and famous spots.</div>
-                            </div>
-                            <div class="shop-details__details">
-                                <div class="shop-details__sku"><h3>Includes </h3><span>transportation service with driver, translator and guide during the 7 days, Meals, drinks and lodging NOT included.</span></div>
-                                <div class="shop-details__cat"><h3>Itinerary</h3>                              
-                                    <li>Visit Cholula and Tehotihuacan pyramids.</li>
-                                    <li>Visit 50 relevant spots of Puebla.</li>
-                                    <li> Africam Safari.</li>
-                                    <li>Magical Towns.</li>
-                                    <li>Gastronomic Tour (More than 20 dishes).</li>
-                                    <li>Wine tasting.</li>
-                                    <li>Mexican Ethnic Culture Tour.</li>
-                                    <li>Museums and famous spots   Spot of myths and legends. 7 days of total immersion in the poblano culture, you will eat, drink and live a total poblano experience</li>
-                                 
+                    <div class="col-lg-6">
+                        <div class="intro__text">
+                            Experience the rich culture and beauty of Puebla with our 7-day tour. This comprehensive package includes transportation services with a driver, translator, and guide to ensure a hassle-free experience. Discover the ancient pyramids of Cholula and Teotihuacan, explore 50 highlights of Puebla, and witness the wonders of Africam Safari. Immerse yourself in the charm of Magical Towns, indulge in a Gastronomic Tour featuring over 20 delicious dishes, and savor a wine tasting experience. Take part in a Mexican Ethnic Culture Tour and delve into the myths and legends of Puebla while visiting museums and famous sites. Throughout the tour, enjoy the company of an experienced translator and historian who will provide valuable insights and make your journey unforgettable. Please note that meals, drinks, and lodging are not included, but transportation from CDMX or Puebla airport to your Puebla hotel is provided. Embark on this complete Puebla experience and immerse yourself in the vibrant culture of the city.
+                        </div>
+                    </div>
+                        
+                    <div class="col-lg-6">
+                        <div class="intro__meta">
+                            <div class="row">
+                                <div class="col-4 col-sm-4">
+                                    <div class="intro__meta__item">
+                                        <h3>Currency</h3>
+                                        <p>
+                                            <i class="la la-money-bill"></i>
+                                            <span>U.S. dollar</span>
+                                        </p>
+                                    </div><!-- .intro__meta__item -->
+                                </div>
+                                <div class="col-4 col-sm-4">
+                                    <div class="intro__meta__item">
+                                        <h3>Languages</h3>
+                                        <p>
+                                           <li><i class="la la-globe"></i> <span>English</span></li>
+                                           <li><i class="la la-globe"></i><span>Spanish</span></li>
+                                        </p>
+                                    </div><!-- .intro__meta__item -->
+                                </div>
+                                <div class="col-4 col-sm-4">
+                                    <div class="intro__meta__item">
+                                        <h3>Availability</h3>
+                                        <p>
+                                            <i class="la la-clock"></i>
+                                            <span>During the tours</span>
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
+                        </div>
                     </div>
-                    
                 </div>
             </div>
+           
         </div>
     </div>
-  
-</main>
+    <section class="places-wrap">
+        <div class="container">
+            <div class="title-wrap align-center">
+                <h2>Individual Services</h2>
+                <p>Transportation</p>
+            </div>
+            <div class="area-places">
+                <div class="place-item layout-02 place-hover" data-maps_name="mattone_restaurant" *ngFor="let transport of travel.slice(0, 8); let index = index" (click)="setTransportationPreview(index)">
+                    <div class="place-inner">
+                        <div class="place-thumb hover-img">
+                            <a class="entry-thumb" ><img [src]="transport.images[0]" alt=""></a>
+                            <a  class="golo-add-to-wishlist btn-add-to-wishlist " data-place-id="185">
+                                <span class="icon-heart">
+                                    <i class="la la-bus"></i>
+                                </span>                                    
+                            </a>       
+                            
+                        
+                            <div class="feature">Transportation</div>
+                        </div>       
+                        <div class="entry-detail">
+                            
+                            <h3 class="place-title"><a >{{transport.name}}</a></h3>
+                            <div class="entry-address"><i class="las la-map-marker"></i>{{transport.travel}}</div>
+                            <div class="entry-bottom">
+                                <div class="place-price">
+                                    <span>$$ {{transport.cost}}</span>
+                                </div>
+                                <div class="place-preview">
+                                    <div class="place-rating">
+                                        <span>5.0</span>
+                                        <i class="la la-star"></i>
+                                    </div>
+                                    <a class="btn-solicitar view1">
+                                        <span>Request a book</span> 
+                                    </a>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+            </div>
+        </div>
+    </section>
+   
+            
+   
