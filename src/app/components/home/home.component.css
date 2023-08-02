@@ -175,5 +175,25 @@
   }
 }
 
+.cities__item .cities__thumb {
+  position: relative;
+}
+
+.cities__item .cities__thumb .black-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.6));
+  opacity: 0;
+  pointer-events: none; /* Esto permite que los eventos del mouse pasen a través del elemento */
+  transition: opacity 0.3s ease; /* Transición para suavizar el efecto */
+}
+
+.cities__item .cities__thumb:hover .black-overlay {
+  opacity: 1;
+}
+
 
 

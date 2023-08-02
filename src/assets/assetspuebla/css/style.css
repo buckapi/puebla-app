@@ -376,7 +376,20 @@ a.site__menu__icon { display: none; }
 
 .cities__item { position: relative; margin-bottom: 30px; border-radius: 15px; -moz-border-radius: 15px; -webkit-border-radius: 15px; -ms-border-radius: 15px; -o-border-radius: 15px; -webkit-backface-visibility: hidden; -moz-backface-visibility: hidden; -webkit-transform: translate3d(0, 0, 0); -moz-transform: translate3d(0, 0, 0); overflow: hidden; }
 .cities__item .cities__name { position: absolute; top: 25px; left: 25px; opacity: 0.9; text-transform: uppercase; color: #ffffff; font-weight: 500; font-size: 15px; }
-.cities__item .cities__thumb a:after { content: ''; position: absolute; left: 0; bottom: 0; right: 0; height: 120px; background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.6)); }
+.cities__item .cities__thumb a:after {
+  content: '';
+  /* position: inherit; */
+  left: 0;
+  bottom: 0;
+  right: 0;
+  height: 120px;
+  background-image: linear-gradient(to bottom, rgb(255 255 255 / 0%), rgb(0 0 0 / 84%));
+
+  /* Aplicar filtro de brillo para oscurecer */
+  filter: brightness(0.7); /* Puedes ajustar el valor según tu preferencia */
+}
+
+
 .cities__item .cities__info { position: absolute; left: 25px; bottom: 25px; }
 
 .hover__box__thumb { overflow: hidden; display: block; position: relative; }

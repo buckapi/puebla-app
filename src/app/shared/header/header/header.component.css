@@ -1,0 +1,14 @@
+@media (max-width: 767px) {
+    .right-header__search  {
+        /* Aquí aplicamos los estilos específicos para dispositivos móviles */
+        border-radius: 15px; /* Reducimos el radio del borde para que se vea más redondeado */
+        height: 30px; /* Ajustamos la altura del botón */
+        line-height: 30px; /* Ajustamos la altura de la línea de texto */
+        font-size: 14px; /* Reducimos el tamaño de la fuente */
+        padding: 0 15px; /* Reducimos el padding horizontal */
+        background-color: #23d3d3; /* Color de fondo para dispositivos móviles */
+        margin-top: auto;
+        color: #dae1e8;
+        flex: 0 0 50%;
+    }
+}
