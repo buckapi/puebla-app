@@ -22,7 +22,7 @@ export class HomeComponent implements AfterViewInit {
   config2: SwiperOptions = {
     a11y: { enabled: true },
     direction: 'horizontal',
-    slidesPerView: 4,
+    slidesPerView: 3,
     keyboard: true,
     mousewheel: false,
     scrollbar: false,

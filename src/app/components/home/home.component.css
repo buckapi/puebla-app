@@ -161,6 +161,19 @@
   opacity: 0.5;
 }
 
+@media (max-width: 767px) {
+  .place-item.layout-02 .entry-detail {
+      padding: 20px 10px 10px 10px; /* Padding de 10px en dispositivos móviles */
+      font-size: 14px; /* Letra más pequeña en dispositivos móviles (cambia el valor según lo necesario) */
+  }
+  .place-item.layout-02 .place-title {
+    font-size: 15px;
+
+  }
+  .place-item.layout-02 .open-now{
+    display: contents;
+  }
+}
 
 
 
