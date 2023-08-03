@@ -50,7 +50,9 @@ export class HomeComponent implements AfterViewInit {
   showScrollUpButton = false;
   travel:any;
   places:any;
+  activeIndex: number | null = null;
 
+ 
   constructor(
     public authRESTService:AuthRESTService,
     public script:ScriptService,
@@ -83,6 +85,14 @@ export class HomeComponent implements AfterViewInit {
     'main'
            )
   }
+  Preview(index: number): void {
+    this.activeIndex = index;
+  }
+
+  clearPreview(): void {
+    this.activeIndex = null;
+  }
+
   checkIfMobile() {
     this.isMobile = window.innerWidth <= 767;
   }
