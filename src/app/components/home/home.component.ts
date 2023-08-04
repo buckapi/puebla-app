@@ -107,7 +107,7 @@ export class HomeComponent implements AfterViewInit {
     this.router.navigate(['/packs']);
   }
   sendToWhatsapp(i:any){
-    const phoneNumber = '+5212216482271';
+    const phoneNumber = '+522223228638';
     const message = `Hello, I want to visit this place: "${this.places[i].name}"`;
     const encodedMessage = encodeURIComponent(message);
     const url = `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${encodedMessage}`;
@@ -116,7 +116,7 @@ export class HomeComponent implements AfterViewInit {
 
 
   // request() {
-  //   const phoneNumber = '+5212216482271';
+  //   const phoneNumber = '+522223228638';
   //   const message = `Hello, I want to book the package "${this.yeoman.preview.name}"`;
   //   const encodedMessage = encodeURIComponent(message);
 

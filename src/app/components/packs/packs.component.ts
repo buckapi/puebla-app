@@ -65,14 +65,14 @@ export class PacksComponent implements OnInit, AfterViewInit {
   }
   
   request() {
-    const phoneNumber = '+5212216482271';
+    const phoneNumber = '+522223228638';
     const message = `Hello, I want to book the package "${this.yeoman.preview.name}"`;
     const encodedMessage = encodeURIComponent(message);
     const url = `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${encodedMessage}`;
     window.open(url, '_blank');
   }
   sendMessageToWhatsApp() {
-    const phoneNumber = '+5212216482271';
+    const phoneNumber = '+522223228638';
     const message = `Hello, my name is ${this.name} (${this.email} )and I want to book the package "${this.yeoman.preview.name}"`;
     const encodedMessage = encodeURIComponent(message);
     const url = `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${encodedMessage}`;
