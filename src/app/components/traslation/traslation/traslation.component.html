@@ -54,7 +54,7 @@
         </div>
     </div>
     
-    <!-- <div class="other-city banner-dark">
+    <div class="other-city banner-dark">
         <div class="container">
             <h2 class="title title--while">Explorer Packs</h2>
             <div class="other-city__content" >
@@ -68,19 +68,34 @@
                             </div>
                             <h4 class="cities__name">{{ pack.name }}</h4>
                             <div class="cities__info">
-                            <p class="cities__description hidden-description" style="max-height: 100px; overflow: hidden;"><strong style="font-weight: bold;">Preview: </strong>{{ pack.shortDescription }}</p>
+                            <p class="cities__description hidden-description" style="max-height: 100px; overflow: hidden;"><strong style="font-weight: bold;">Detail: </strong>{{ pack.shortDescription }}</p>
                             <p class="cities__valid hidden-description" ><strong style="font-weight: bold;"> Duration: </strong>{{ pack.duration }}</p>
                             <p class="cities__view hidden-description" ><strong style="font-weight: bold;">Valid:</strong> {{ pack.valid }} persons </p>
                             <h4 class="cities__number hidden-description view" style=" cursor: pointer;"(click)="setPreview(index)">View more</h4>
                             </div>
-                        </div>¿
+                        </div>
                     </div>
-                    
+                    <div class="col-lg-4 col-sm-12"> 
+                        <div class="cities__item hover__box">
+                          <div class="cities__thumb hover__box__thumb">
+                            <a title="Puebla">
+                              <img src="assets/assetspuebla/images/city/tokyo.jpeg" alt="Tokyo">
+                            </a>
+                            <div class="black-overlay"></div>
+                          </div>
+                          <h3 class="cities__name">Individual Services</h3>
+                          <div class="cities__info">
+                            <p class="cities__description hidden-description" style="max-height: 100px; overflow: hidden;"><strong style="font-weight: bold;">Preview: Transportation CDMX-PUEBLA-AIRPORT</strong></p>
+                           
+                            <h4 class="cities__number hidden-description view" style=" cursor: pointer;" routerLink="/travel" >Request</h4>
+                          </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>  -->
-    <section class="places-wrap">
+    </div> 
+    <!-- <section class="places-wrap">
         <div class="container">
             <div class="title-wrap align-center">
                 <h2>Individual Services</h2>
@@ -125,4 +140,4 @@
             
             </div>
         </div>
-    </section>
+    </section> -->
