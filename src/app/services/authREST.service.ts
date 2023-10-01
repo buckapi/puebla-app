@@ -9,7 +9,7 @@ import { tap } from 'rxjs/operators';
   providedIn: 'root'
 })
 export class AuthRESTService {
-  private apiBaseUrl = 'https://db.buckapi.us:9018/api'; // URL base de la API
+  private apiBaseUrl = 'https://db.guidedtravelmx.com:9018/api'; // URL base de la API
 
   constructor(private http: HttpClient,public yeoman:Yeoman) { }
 
